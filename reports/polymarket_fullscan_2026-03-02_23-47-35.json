@@ -1,0 +1,35 @@
+﻿[
+    {
+        "event":  "Will the price of Ethereum be above $2,200 on March 4?",
+        "amount":  7.21,
+        "orderTime":  "2026-03-02 23:42:35",
+        "odds":  0.103,
+        "endTime":  null,
+        "hitReasons":  "+12 low-odds(1%-20%); +15 new-wallet(\u003c5d)",
+        "score":  27,
+        "wallet":  "0x965d0b754328692a1ceae77ca9219347dc353a0a",
+        "link":  "https://polymarket.com/event/ethereum-above-2200-on-march-4"
+    },
+    {
+        "event":  "Will the price of Ethereum be above $2,200 on March 4?",
+        "amount":  0.72,
+        "orderTime":  "2026-03-02 23:42:35",
+        "odds":  0.103,
+        "endTime":  null,
+        "hitReasons":  "+12 low-odds(1%-20%); +15 new-wallet(\u003c5d)",
+        "score":  27,
+        "wallet":  "0x965d0b754328692a1ceae77ca9219347dc353a0a",
+        "link":  "https://polymarket.com/event/ethereum-above-2200-on-march-4"
+    },
+    {
+        "event":  "Will Lens win the 2025鈥?6 French Ligue 1?",
+        "amount":  3869.94,
+        "orderTime":  "2026-03-02 23:42:25",
+        "odds":  0.052,
+        "endTime":  "2026-05-30T00:00:00Z",
+        "hitReasons":  "+12 low-odds(1%-20%); +10 order\u003e$3000",
+        "score":  22,
+        "wallet":  "0x3c72bc4827af9fba56afc8bba55bc9983aed7af1",
+        "link":  "https://polymarket.com/event/will-lens-win-the-202526-french-ligue-1"
+    }
+]
