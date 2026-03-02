@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "computedHash": "25872a21881a950edc3db1f3329664d60405d539660ce05b3265db2de06a7dfd"
+    },
+    "polymarket": {
+      "source": "C:\\Users\\Administrator\\.openclaw\\workspace\\skills\\polymarket",
+      "sourceType": "local",
+      "computedHash": "2f120f8c5e0b49bf2a6aaa774e73984c4970bd224fd286cfc31ddd0d77d80522"
+    }
+  }
+}
