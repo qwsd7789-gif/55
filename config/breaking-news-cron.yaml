@@ -1,0 +1,66 @@
+# 突发财经新闻检测任务
+# 每 2 小时运行一次
+
+- name: Check Breaking Finance News
+  schedule: "0 */2 * * *"
+  timezone: "Asia/Shanghai"
+  enabled: true
+  sources:
+    rss:
+      - name: "Al Jazeera"
+        url: "https://www.aljazeera.com/xml/rss/all.xml"
+        priority: high
+      - name: "Reuters Markets"
+        url: "https://www.reutersagency.com/feed/?taxonomy=markets&post_type=reuters-best"
+        priority: high
+      - name: "CoinDesk"
+        url: "https://www.coindesk.com/arc/outboundfeeds/rss/?outputType=xml"
+        priority: high
+      - name: "OilPrice.com"
+        url: "https://oilprice.com/rss/oilprice.xml"
+        priority: high
+      - name: "Kitco Gold"
+        url: "https://www.kitco.com/rss/gold-news.xml"
+        priority: high
+  
+  keywords:
+    high_impact:
+      - gold
+      - XAU
+      - oil
+      - crude
+      - WTI
+      - Brent
+      - bitcoin
+      - BTC
+      - ethereum
+      - ETH
+      - crypto
+      - federal reserve
+      - fed
+      - interest rate
+      - war
+      - conflict
+      - middle east
+      - inflation
+      - CPI
+      - breaking
+      - urgent
+      - sanctions
+    assets:
+      gold: ["gold", "XAU", "XAUUSD", "贵金属"]
+      oil: ["oil", "crude", "WTI", "Brent", "petroleum", "油价", "原油"]
+      crypto: ["bitcoin", "BTC", "ethereum", "ETH", "crypto", "数字货币"]
+  
+  output:
+    format: bilingual
+    translate_to: zh-CN
+    include_summary: true
+    include_sentiment: true
+  
+  delivery:
+    channels:
+      - webchat
+    deduplication: true
+    dedup_key: url
+    retention_hours: 48

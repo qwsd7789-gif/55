@@ -1,0 +1,9 @@
+# OpenClaw backup ignore
+*.tmp
+*.cache
+node_modules/
+
+
+opennews-mcp/
+
+.openclaw/skills/XiaohongshuSkills/

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Panda Generator</title>
+    <style>
+        body { margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #f0f0f0; }
+        canvas { box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="1080" height="1440"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // 渐变背景
+        const gradient = ctx.createLinearGradient(0, 0, 0, 1440);
+        gradient.addColorStop(0, '#e8f5e9');
+        gradient.addColorStop(0.5, '#c8e6c9');
+        gradient.addColorStop(1, '#a5d6a7');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 1080, 1440);
+        
+        const cx = 540, cy = 750;
+        
+        // 耳朵
+        ctx.fillStyle = '#1a1a1a';
+        ctx.beginPath(); ctx.arc(cx - 120, cy - 180, 60, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + 120, cy - 180, 60, 0, Math.PI * 2); ctx.fill();
+        
+        // 身体
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath(); ctx.ellipse(cx, cy + 150, 200, 280, 0, 0, Math.PI * 2); ctx.fill();
+        
+        // 头
+        ctx.beginPath(); ctx.arc(cx, cy - 50, 180, 0, Math.PI * 2); ctx.fill();
+        
+        // 黑眼圈
+        ctx.fillStyle = '#1a1a1a';
+        ctx.beginPath(); ctx.ellipse(cx - 60, cy - 60, 50, 65, -0.2, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(cx + 60, cy - 60, 50, 65, 0.2, 0, Math.PI * 2); ctx.fill();
+        
+        // 眼睛白
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath(); ctx.arc(cx - 50, cy - 80, 18, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + 70, cy - 80, 18, 0, Math.PI * 2); ctx.fill();
+        
+        // 眼珠
+        ctx.fillStyle = '#1a1a1a';
+        ctx.beginPath(); ctx.arc(cx - 48, cy - 78, 10, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + 72, cy - 78, 10, 0, Math.PI * 2); ctx.fill();
+        
+        // 高光
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath(); ctx.arc(cx - 45, cy - 82, 4, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + 75, cy - 82, 4, 0, Math.PI * 2); ctx.fill();
+        
+        // 鼻子
+        ctx.fillStyle = '#1a1a1a';
+        ctx.beginPath(); ctx.ellipse(cx, cy + 20, 25, 18, 0, 0, Math.PI * 2); ctx.fill();
+        
+        // 腮红
+        ctx.fillStyle = 'rgba(255, 182, 193, 0.6)';
+        ctx.beginPath(); ctx.arc(cx - 130, cy + 10, 40, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(cx + 130, cy + 10, 40, 0, Math.PI * 2); ctx.fill();
+        
+        // 四肢
+        ctx.fillStyle = '#1a1a1a';
+        ctx.beginPath(); ctx.ellipse(cx - 220, cy + 180, 50, 100, -0.5, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(cx + 220, cy + 180, 50, 100, 0.5, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(cx - 100, cy + 380, 60, 50, 0, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.ellipse(cx + 100, cy + 380, 60, 50, 0, 0, Math.PI * 2); ctx.fill();
+        
+        // 嘴巴
+        ctx.strokeStyle = '#1a1a1a';
+        ctx.lineWidth = 4;
+        ctx.beginPath(); ctx.arc(cx - 30, cy + 60, 30, 0, Math.PI); ctx.stroke();
+        ctx.beginPath(); ctx.arc(cx + 30, cy + 60, 30, 0, Math.PI); ctx.stroke();
+        
+        // 竹子
+        for (let i = 0; i < 6; i++) {
+            const x = 80 + i * 180;
+            ctx.fillStyle = '#8d6e63';
+            ctx.fillRect(x, 1250, 18, 90);
+            ctx.fillStyle = '#66bb6a';
+            ctx.beginPath(); ctx.moveTo(x - 6, 1250); ctx.lineTo(x + 9, 1215); ctx.lineTo(x + 24, 1250); ctx.fill();
+        }
+        
+        console.log('Panda drawn!');
+    </script>
+</body>
+</html>
