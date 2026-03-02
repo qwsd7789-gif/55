@@ -1,5 +1,11 @@
 # MEMORY.md - 长期记忆
 
+## 🧠 记忆系统（Three-Tier）
+- **L1 长期记忆**: `MEMORY.md`（核心原则/用户偏好/长期目标）
+- **L2 每日记忆**: `memory/YYYY-MM-DD.md`（事件、决策、上下文）
+- **L3 项目记忆**: `PROJECTS.md`（目标、状态、阻塞、下一步）
+- **检索优先级**: MEMORY.md > 今日日志 > 昨日日志 > PROJECTS.md > 更早日志
+
 ## 🧠 重要技能记忆
 
 ### OpenNews 6551 Skill
