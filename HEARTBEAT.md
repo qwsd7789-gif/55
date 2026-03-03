@@ -9,8 +9,9 @@
 2. 从 BBC Middle East RSS 获取英国视角新闻
 3. 从 6551 OpenNews API 获取加密/推特聚合新闻
 4. 追加“多源检索层”：用 Brave/Search 抓取补充来源（Reuters/AP/FT/CNBC 等）
+   - 若 `BRAVE_API_KEY` 未配置或调用失败：自动跳过该层，不报错、不在简报里提示技术错误
 5. 筛选 Iran/Israel/Gaza/Khamenei/Hamas/Hezbollah/Oil/tanker 关键词
-6. 整合四大信源，整理前10条最重要新闻
+6. 整合可用信源，整理前10条最重要新闻（不强制四源齐全）
 7. 生成简报发送
 
 ## 简报模板
