@@ -8,14 +8,15 @@
 1. 从 Al Jazeera (半岛电视台) RSS 获取最新中东新闻
 2. 从 BBC Middle East RSS 获取英国视角新闻
 3. 从 6551 OpenNews API 获取加密/推特聚合新闻
-4. 筛选 Iran/Israel/Gaza/Khamenei/Hamas/Hezbollah/Oil/tanker 关键词
-5. 整合三大信源，整理前10条最重要新闻
-6. 生成简报发送
+4. 追加“多源检索层”：用 Brave/Search 抓取补充来源（Reuters/AP/FT/CNBC 等）
+5. 筛选 Iran/Israel/Gaza/Khamenei/Hamas/Hezbollah/Oil/tanker 关键词
+6. 整合四大信源，整理前10条最重要新闻
+7. 生成简报发送
 
 ## 简报模板
 ```
 📊 伊朗战争简报 - [时间]
-📡 信源：半岛电视台 + BBC + 6551 OpenNews(推特聚合)
+📡 信源：半岛电视台 + BBC + 6551 OpenNews(推特聚合) + Brave补充检索
 
 🔥 最新动态：
 1. [标题] [信源] ([时间])
@@ -40,6 +41,7 @@
 | Al Jazeera (半岛电视台) | RSS | https://www.aljazeera.com/xml/rss/all.xml |
 | BBC Middle East | RSS | https://feeds.bbci.co.uk/news/world/middle_east/rss.xml |
 | 6551 OpenNews | API | https://ai.6551.io/open/news_search |
+| Brave Search（补充） | API/搜索 | 通过 web_search 检索 Reuters/AP/FT/CNBC 等 |
 
 ## 关键词监控
 - 冲突: Iran, Israel, Gaza, war, conflict, Khamenei, Hamas, Hezbollah, Lebanon
