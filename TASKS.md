@@ -18,11 +18,13 @@
 
 ## In Progress
 
-- [ ] P1 启用 task-management skill 并完成验收
-  - 开始：2026-03-04
-  - 备注：已安装，正在创建 TASKS.md 与样例任务
+- （暂无）
 
 ## Done
+
+- [x] 启用 task-management skill 并完成验收
+  - 完成：2026-03-04
+  - 备注：已安装并创建 TASKS.md 与样例任务
 
 - [x] 安装 anthropics/knowledge-work-plugins@task-management
   - 完成：2026-03-04
