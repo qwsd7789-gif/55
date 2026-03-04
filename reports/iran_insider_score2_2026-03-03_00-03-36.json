@@ -1,0 +1,24 @@
+﻿[
+    {
+        "event":  "Will Iran name a successor to Khamenei by March 6?",
+        "amount":  4660.11,
+        "orderTime":  "2026-03-02 23:56:49",
+        "odds":  0.47,
+        "endTime":  "2026-03-31 08:00:00",
+        "wallet":  "0xfc2f4f50ce2f6045d35558a5e2d8d4b2ac6610c7",
+        "score":  20,
+        "reasons":  "+20 标的单一(样本内)",
+        "link":  "https://polymarket.com/event/will-iran-name-a-successor-to-khamenei-by-march-6-419-412-158-246"
+    },
+    {
+        "event":  "US x Iran ceasefire by April 30?",
+        "amount":  3846.49,
+        "orderTime":  "2026-03-02 23:56:45",
+        "odds":  0.67,
+        "endTime":  "-",
+        "wallet":  "0xc785938500dcc8c2f0d9b3461fab2bcb5630f3d6",
+        "score":  20,
+        "reasons":  "+20 标的单一(样本内)",
+        "link":  "https://polymarket.com/event/us-x-iran-ceasefire-by-april-30"
+    }
+]

@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "skills": {
+    "polymarket-analysis": {
+      "version": "2.1.0",
+      "installedAt": 1772465343178
+    },
+    "polymarket-api": {
+      "version": "1.0.0",
+      "installedAt": 1772467577921
+    }
+  }
+}

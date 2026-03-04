@@ -10,6 +10,21 @@
       "source": "C:\\Users\\Administrator\\.openclaw\\workspace\\skills\\polymarket",
       "sourceType": "local",
       "computedHash": "2f120f8c5e0b49bf2a6aaa774e73984c4970bd224fd286cfc31ddd0d77d80522"
+    },
+    "polymarket-api": {
+      "source": "agentmc15/polymarket-trader",
+      "sourceType": "github",
+      "computedHash": "ac2eb609a82f6d88f2296a60802a9bddda27fcfc2d8e95e0fba3a195d533aebe"
+    },
+    "trader-analysis": {
+      "source": "agentmc15/polymarket-trader",
+      "sourceType": "github",
+      "computedHash": "5b50723cdf576e7533e3b1a31f306193c8928144749fcf72f4e80fc89e53881a"
+    },
+    "trading-strategies": {
+      "source": "agentmc15/polymarket-trader",
+      "sourceType": "github",
+      "computedHash": "6e1f4ba1ad82ef825935bb3821eee699b7e6cd75f33214cae894ac2aaa3d8fb9"
     }
   }
 }

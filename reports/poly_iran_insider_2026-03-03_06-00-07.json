@@ -1,0 +1,46 @@
+﻿[
+    {
+        "event":  "Will Iran close the Strait of Hormuz by March 31?",
+        "amountUSD":  15774.46,
+        "orderTimeCN":  "2026-03-03 05:58:07",
+        "odds":  0.66,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0x7744bfd749a70020d16a1fcbac1d064761c9999e",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-close-the-strait-of-hormuz-by-march-31"
+    },
+    {
+        "event":  "Khamenei out as Supreme Leader of Iran by February 28?",
+        "amountUSD":  7992,
+        "orderTimeCN":  "2026-03-03 05:56:31",
+        "odds":  0.998,
+        "endTimeCN":  "2026-02-28 08:00:00",
+        "wallet":  "0xc04327210c95d1addf43285c39fe43406759eb1b",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/khamenei-out-as-supreme-leader-of-iran-by-february-28"
+    },
+    {
+        "event":  "Will Iran close the Strait of Hormuz by June 30?",
+        "amountUSD":  2903.29,
+        "orderTimeCN":  "2026-03-03 05:58:39",
+        "odds":  0.677,
+        "endTimeCN":  "2026-06-30 08:00:00",
+        "wallet":  "0x75253f58071564ba95f36258fcfb1e918552cde1",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-close-the-strait-of-hormuz-by-june-30"
+    },
+    {
+        "event":  "Will Iran close the Strait of Hormuz by March 31?",
+        "amountUSD":  2000,
+        "orderTimeCN":  "2026-03-03 05:54:25",
+        "odds":  0.66,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0x0a199eb79682188fb66f3a3c95795aa913663c95",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-close-the-strait-of-hormuz-by-march-31"
+    }
+]

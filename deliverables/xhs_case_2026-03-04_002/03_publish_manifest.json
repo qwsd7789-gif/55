@@ -1,0 +1,27 @@
+{
+  "package_id": "xhs_case_2026-03-04_002",
+  "platform": "xiaohongshu",
+  "type": "image_post",
+  "status": "draft",
+  "title": "日进斗金💰✨｜五行喜土招财小双圈",
+  "content_file": "01_title_and_copy.md",
+  "hashtags": [
+    "#水晶手串",
+    "#五行搭配",
+    "#喜土",
+    "#黄水晶",
+    "#虎眼石",
+    "#招财手串",
+    "#女生饰品",
+    "#新中式饰品",
+    "#能量水晶",
+    "#旺事业"
+  ],
+  "generation": {
+    "tool": "Suxi/Gemini",
+    "prompt_file": "02_image_generation.md",
+    "images_expected": 4,
+    "ratio": "3:4"
+  },
+  "notes": "结构复刻版：保留主题与互动机制，不逐字照抄。"
+}

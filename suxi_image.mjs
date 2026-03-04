@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const apiKey = process.env.SUXI_API_KEY || process.env.OPENAI_API_KEY;
 const baseUrl = (process.env.OPENAI_BASE_URL || 'https://new.suxi.ai/v1').replace(/\/$/, '');
-const model = process.env.SUXI_IMAGE_MODEL || 'gemini-3-pro-image-preview';
+const model = process.env.SUXI_IMAGE_MODEL || 'gemini-2.5-flash-image';
 
 if (!apiKey) {
   console.error('Missing SUXI_API_KEY (or OPENAI_API_KEY)');
