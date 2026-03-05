@@ -3,6 +3,7 @@ param(
   [string]$Keyword,
   [int]$Top = 20,
   [int]$Retry = 2,
+  [int]$BackfillPasses = 1,
   [double]$MinDelaySec = 0.8,
   [double]$MaxDelaySec = 1.8,
   [string]$Host = "127.0.0.1",
@@ -15,12 +16,10 @@ $ErrorActionPreference = 'Stop'
 $workspace = "C:\Users\Administrator\.openclaw\workspace"
 $cdpScript = "C:\Users\Administrator\.openclaw\skills\XiaohongshuSkills\scripts\cdp_publish.py"
 
-if (-not (Test-Path $cdpScript)) {
-  throw "cdp_publish.py not found: $cdpScript"
-}
-
+if (-not (Test-Path $cdpScript)) { throw "cdp_publish.py not found: $cdpScript" }
 if ($Top -lt 1) { throw "Top must be >= 1" }
 if ($Retry -lt 1) { throw "Retry must be >= 1" }
+if ($BackfillPasses -lt 0) { throw "BackfillPasses must be >= 0" }
 if ($MinDelaySec -gt $MaxDelaySec) { throw "MinDelaySec must be <= MaxDelaySec" }
 
 function Invoke-Xhs {
@@ -40,27 +39,16 @@ function Invoke-Xhs {
   $stderr = $p.StandardError.ReadToEnd()
   $p.WaitForExit()
 
-  return [pscustomobject]@{
-    ExitCode = $p.ExitCode
-    StdOut = $stdout
-    StdErr = $stderr
-  }
+  [pscustomobject]@{ ExitCode = $p.ExitCode; StdOut = $stdout; StdErr = $stderr }
 }
 
 function Extract-JsonAfterMarker {
-  param(
-    [string]$Text,
-    [string]$Marker
-  )
+  param([string]$Text,[string]$Marker)
   $idx = $Text.IndexOf($Marker)
   if ($idx -lt 0) { return $null }
   $jsonText = $Text.Substring($idx + $Marker.Length).Trim()
   if ([string]::IsNullOrWhiteSpace($jsonText)) { return $null }
-  try {
-    return $jsonText | ConvertFrom-Json
-  } catch {
-    return $null
-  }
+  try { return $jsonText | ConvertFrom-Json } catch { return $null }
 }
 
 function Get-FeedId {
@@ -79,10 +67,74 @@ function Get-XsecToken {
   return $null
 }
 
+function Classify-Error {
+  param([string]$Reason)
+  $r = ($Reason | Out-String).ToLowerInvariant()
+  if ($r -match 'not_logged_in|login|qr') { return 'login' }
+  if ($r -match 'timeout|timed out|waiting for') { return 'timeout' }
+  if ($r -match 'json|decode|parse') { return 'parse' }
+  if ($r -match '429|forbidden|risk|captcha|blocked|inaccessible') { return 'risk_control' }
+  if ($r -match 'connection|cannot reach chrome|cdp|websocket') { return 'browser_connection' }
+  if ($r -match 'missing_feed_id_or_xsec_token') { return 'missing_key' }
+  return 'unknown'
+}
+
+function Sleep-Random {
+  param([double]$Min,[double]$Max)
+  $ms = [int]((Get-Random -Minimum $Min -Maximum $Max) * 1000)
+  Start-Sleep -Milliseconds $ms
+}
+
+function Fetch-Detail {
+  param(
+    [string]$FeedId,
+    [string]$Xsec,
+    [int]$RetryCount,
+    [string[]]$CommonArgs,
+    [double]$Min,
+    [double]$Max
+  )
+
+  for ($i = 1; $i -le $RetryCount; $i++) {
+    $detailArgs = @($CommonArgs + @('get-feed-detail','--feed-id',$FeedId,'--xsec-token',$Xsec))
+    $res = Invoke-Xhs -Args $detailArgs
+
+    if ($res.ExitCode -eq 0) {
+      $payload = Extract-JsonAfterMarker -Text $res.StdOut -Marker 'GET_FEED_DETAIL_RESULT:'
+      if ($payload) {
+        return [pscustomobject]@{
+          ok = $true
+          feed_id = $FeedId
+          xsec_token = $Xsec
+          attempt = $i
+          detail = $payload.detail
+          reason = $null
+          error_type = $null
+        }
+      }
+      $reason = 'JSON parse failed'
+    } else {
+      $reason = (($res.StdErr + "`n" + $res.StdOut) | Out-String).Trim()
+    }
+
+    if ($i -lt $RetryCount) { Sleep-Random -Min $Min -Max $Max }
+  }
+
+  [pscustomobject]@{
+    ok = $false
+    feed_id = $FeedId
+    xsec_token = $Xsec
+    attempt = $RetryCount
+    detail = $null
+    reason = $reason
+    error_type = (Classify-Error -Reason $reason)
+  }
+}
+
 $commonArgs = @('"' + $cdpScript + '"', '--host', $Host, '--port', "$Port")
 if ($ReuseExistingTab) { $commonArgs += '--reuse-existing-tab' }
 
-Write-Host "[xhs] Step1: search links by keyword='$Keyword'"
+Write-Host "[xhs-v2] Step1: search links by keyword='$Keyword'"
 $searchArgs = @($commonArgs + @('search-feeds', '--keyword', '"' + $Keyword.Replace('"','\"') + '"'))
 $searchResult = Invoke-Xhs -Args $searchArgs
 
@@ -97,96 +149,110 @@ if (-not $searchPayload) {
 
 $feeds = @($searchPayload.feeds)
 if (-not $feeds -or $feeds.Count -eq 0) {
-  Write-Host "[xhs] No feeds found."
+  Write-Host "[xhs-v2] No feeds found."
   exit 0
 }
 
-$selected = $feeds | Select-Object -First $Top
-Write-Host "[xhs] Step2: extract details from $($selected.Count) links"
+$selected = @($feeds | Select-Object -First $Top)
+Write-Host "[xhs-v2] Step2: extract details from $($selected.Count) links"
 
 $details = @()
 $errors = @()
-$success = 0
-$failed = 0
+$errorBreakdown = @{}
 
+$queue = @()
 foreach ($feed in $selected) {
   $feedId = Get-FeedId -Feed $feed
   $xsec = Get-XsecToken -Feed $feed
-
   if (-not $feedId -or -not $xsec) {
-    $failed++
-    $errors += [pscustomobject]@{
-      feed_id = $feedId
-      xsec_token = $xsec
-      reason = 'missing_feed_id_or_xsec_token'
-    }
+    $errType = 'missing_key'
+    if (-not $errorBreakdown.ContainsKey($errType)) { $errorBreakdown[$errType] = 0 }
+    $errorBreakdown[$errType]++
+    $errors += [pscustomobject]@{ feed_id = $feedId; xsec_token = $xsec; reason = 'missing_feed_id_or_xsec_token'; error_type = $errType; pass = 0 }
     continue
   }
-
-  $ok = $false
-  $lastErr = $null
-
-  for ($i = 1; $i -le $Retry; $i++) {
-    $detailArgs = @($commonArgs + @(
-      'get-feed-detail',
-      '--feed-id', $feedId,
-      '--xsec-token', $xsec
-    ))
-
-    $res = Invoke-Xhs -Args $detailArgs
-    if ($res.ExitCode -eq 0) {
-      $payload = Extract-JsonAfterMarker -Text $res.StdOut -Marker 'GET_FEED_DETAIL_RESULT:'
-      if ($payload) {
-        $details += [pscustomobject]@{
-          feed_id = $feedId
-          xsec_token = $xsec
-          attempt = $i
-          detail = $payload.detail
-        }
-        $success++
-        $ok = $true
-        break
-      }
-      $lastErr = "JSON parse failed"
-    } else {
-      $lastErr = $res.StdErr
-    }
-
-    $sleep = Get-Random -Minimum $MinDelaySec -Maximum $MaxDelaySec
-    Start-Sleep -Milliseconds ([int]($sleep * 1000))
-  }
-
-  if (-not $ok) {
-    $failed++
-    $errors += [pscustomobject]@{
-      feed_id = $feedId
-      xsec_token = $xsec
-      reason = ($lastErr | Out-String).Trim()
-    }
-  }
-
-  $gap = Get-Random -Minimum $MinDelaySec -Maximum $MaxDelaySec
-  Start-Sleep -Milliseconds ([int]($gap * 1000))
+  $queue += [pscustomobject]@{ feed_id = $feedId; xsec_token = $xsec }
 }
+
+# Pass 0: normal extraction
+$failedQueue = @()
+foreach ($item in $queue) {
+  $r = Fetch-Detail -FeedId $item.feed_id -Xsec $item.xsec_token -RetryCount $Retry -CommonArgs $commonArgs -Min $MinDelaySec -Max $MaxDelaySec
+  if ($r.ok) {
+    $details += [pscustomobject]@{ feed_id = $r.feed_id; xsec_token = $r.xsec_token; attempt = $r.attempt; pass = 0; detail = $r.detail }
+  } else {
+    $failedQueue += $item
+    $etype = $r.error_type
+    if (-not $errorBreakdown.ContainsKey($etype)) { $errorBreakdown[$etype] = 0 }
+    $errorBreakdown[$etype]++
+    $errors += [pscustomobject]@{ feed_id = $r.feed_id; xsec_token = $r.xsec_token; reason = $r.reason; error_type = $etype; pass = 0 }
+  }
+  Sleep-Random -Min $MinDelaySec -Max $MaxDelaySec
+}
+
+# Backfill passes for failed queue
+for ($p = 1; $p -le $BackfillPasses; $p++) {
+  if (-not $failedQueue -or $failedQueue.Count -eq 0) { break }
+  Write-Host "[xhs-v2] Backfill pass $p for $($failedQueue.Count) failed items"
+
+  $nextFailed = @()
+  foreach ($item in $failedQueue) {
+    $r = Fetch-Detail -FeedId $item.feed_id -Xsec $item.xsec_token -RetryCount $Retry -CommonArgs $commonArgs -Min $MinDelaySec -Max $MaxDelaySec
+    if ($r.ok) {
+      $details += [pscustomobject]@{ feed_id = $r.feed_id; xsec_token = $r.xsec_token; attempt = $r.attempt; pass = $p; detail = $r.detail }
+      # remove old pass0 error rows for this item when recovered
+      $errors = @($errors | Where-Object { -not (($_.feed_id -eq $r.feed_id) -and ($_.xsec_token -eq $r.xsec_token)) })
+    } else {
+      $nextFailed += $item
+      $etype = $r.error_type
+      if (-not $errorBreakdown.ContainsKey($etype)) { $errorBreakdown[$etype] = 0 }
+      $errorBreakdown[$etype]++
+      $errors += [pscustomobject]@{ feed_id = $r.feed_id; xsec_token = $r.xsec_token; reason = $r.reason; error_type = $etype; pass = $p }
+    }
+    Sleep-Random -Min $MinDelaySec -Max $MaxDelaySec
+  }
+  $failedQueue = $nextFailed
+}
+
+# de-dup detail by feed_id (keep first success)
+$detailMap = @{}
+foreach ($d in $details) {
+  if (-not $detailMap.ContainsKey($d.feed_id)) { $detailMap[$d.feed_id] = $d }
+}
+$finalDetails = @($detailMap.Values)
+
+# de-dup errors by feed_id keep latest pass
+$errorMap = @{}
+foreach ($e in $errors) { $errorMap[$e.feed_id] = $e }
+$finalErrors = @($errorMap.Values)
+
+$success = $finalDetails.Count
+$failed = $finalErrors.Count
+$selectedCount = $selected.Count
+$successRate = if ($selectedCount -gt 0) { [Math]::Round(($success / $selectedCount) * 100, 2) } else { 0 }
 
 $ts = Get-Date -Format 'yyyy-MM-dd_HH-mm-ss'
 $outDir = Join-Path $workspace 'reports'
 if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out-Null }
-$outPath = Join-Path $outDir ("xhs_collect_" + $ts + ".json")
+$outPath = Join-Path $outDir ("xhs_collect_v2_" + $ts + ".json")
 
 $result = [pscustomobject]@{
   keyword = $Keyword
   top = $Top
-  selected_count = $selected.Count
+  retry = $Retry
+  backfill_passes = $BackfillPasses
+  selected_count = $selectedCount
   success = $success
   failed = $failed
+  success_rate = $successRate
   recommended_keywords = $searchPayload.recommended_keywords
-  details = $details
-  errors = $errors
+  error_breakdown = $errorBreakdown
+  details = $finalDetails
+  errors = $finalErrors
   generated_at = (Get-Date).ToString('o')
 }
 
-$result | ConvertTo-Json -Depth 12 | Set-Content -Path $outPath -Encoding UTF8
+$result | ConvertTo-Json -Depth 16 | Set-Content -Path $outPath -Encoding UTF8
 
-Write-Host "[xhs] Done. success=$success failed=$failed"
-Write-Host "[xhs] Report: $outPath"
+Write-Host "[xhs-v2] Done. success=$success failed=$failed success_rate=$successRate%"
+Write-Host "[xhs-v2] Report: $outPath"

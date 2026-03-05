@@ -50,9 +50,10 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **发布模式**: 直接发布（不再询问确认）
 - **默认账号**: default
 - **浏览器模式**: headed（有窗口）
-- **稳定抓取脚本（两阶段）**: `scripts/xhs_collect_notes.ps1`
+- **稳定抓取脚本（两阶段，v2）**: `scripts/xhs_collect_notes.ps1`
   - 流程: 先 `search-feeds` 抓链接，再逐条 `get-feed-detail` 提取
-  - 示例: `./scripts/xhs_collect_notes.ps1 -Keyword "留学申请" -Top 20 -Retry 2 -ReuseExistingTab`
+  - 增强: 失败分类统计 + 自动补抓（`-BackfillPasses`）
+  - 示例: `./scripts/xhs_collect_notes.ps1 -Keyword "留学申请" -Top 20 -Retry 2 -BackfillPasses 1 -ReuseExistingTab`
 
 ---
 
