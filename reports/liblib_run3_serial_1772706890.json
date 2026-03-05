@@ -1,0 +1,42 @@
+{
+  "source": "D:\\xhs_exports\\images\\2026-03-05_16-23-09\\67a7325c000000002901bce7\\01.jpg",
+  "image_url": "https://liblibai-airship-temp.oss-cn-beijing.aliyuncs.com/aliyun-cn-prod/f28a36fe1cc04b3598b4ff58497faa39.jpg",
+  "runs": {
+    "A": {
+      "generateUuid": "4ef84026b0cd4067a61aa28419a5d9f0",
+      "preset": {
+        "seed": 123456,
+        "steps": 24,
+        "cfg": 4.0,
+        "denoise": 0.25
+      },
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/5b21f1bd6fe6294a0c68990ec7f52d0a50d937daf64e978baa5491a0cfd2e9de.png"
+      ]
+    },
+    "B": {
+      "generateUuid": "3ecc6153dadf433894614d894c7ce864",
+      "preset": {
+        "seed": 123456,
+        "steps": 30,
+        "cfg": 5.0,
+        "denoise": 0.45
+      },
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/5d36b87f9beef5a54deabd10fe1925a154b46c16003b200760e10a87c5894fe4.png"
+      ]
+    },
+    "C": {
+      "generateUuid": "a6c83fbf74824e7aa6c0bb29b048b39b",
+      "preset": {
+        "seed": -1,
+        "steps": 40,
+        "cfg": 6.5,
+        "denoise": 0.72
+      },
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/ac085033b67a9f2bf29103f040aa557863a08dff8e1889f5dbddb69f7bc1c59e.png"
+      ]
+    }
+  }
+}

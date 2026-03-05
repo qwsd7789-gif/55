@@ -1,0 +1,61 @@
+{
+  "image_url": "https://liblibai-airship-temp.oss-cn-beijing.aliyuncs.com/aliyun-cn-prod/34209ff5829047908ae1a5cf558edd1a.png",
+  "runs": {
+    "A": {
+      "preset": {
+        "seed": 123456,
+        "steps": 24,
+        "cfg": 4.0,
+        "denoise": 0.25
+      },
+      "generateUuid": "d686653a005d4daeb2131434531797d9",
+      "pointsCost": 10,
+      "accountBalance": 480,
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/252f738593c0fd8fca10a7e4055716b98651153109ed3960b05eebc956402f51.png"
+      ]
+    },
+    "B": {
+      "preset": {
+        "seed": 123456,
+        "steps": 28,
+        "cfg": 4.8,
+        "denoise": 0.38
+      },
+      "generateUuid": "7ae7f184204348c9aa33a50b02da7937",
+      "pointsCost": 11,
+      "accountBalance": 469,
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/71efec86da302d3e6f72d1133b72769a1475d1f86f109091fb7421129843e9ce.png"
+      ]
+    },
+    "C": {
+      "preset": {
+        "seed": -1,
+        "steps": 34,
+        "cfg": 5.8,
+        "denoise": 0.58
+      },
+      "generateUuid": "28f3bbfaa4474ad1b5814841e251fc00",
+      "pointsCost": 11,
+      "accountBalance": 458,
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/b9fa3c5c7f3929951449d8aef0ce4e007d0e9807155a45f2fd02d42d40be0e4d.png"
+      ]
+    },
+    "D": {
+      "preset": {
+        "seed": -1,
+        "steps": 42,
+        "cfg": 6.8,
+        "denoise": 0.75
+      },
+      "generateUuid": "7f6eba4912c44c64b34a67a0ce83e45f",
+      "pointsCost": 12,
+      "accountBalance": 1446,
+      "imageUrls": [
+        "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/fc93d20468d840444c82651cbafb9d4c80c274f5509b2be3074047271be38809.png"
+      ]
+    }
+  }
+}
