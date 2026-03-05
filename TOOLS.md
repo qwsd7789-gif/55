@@ -53,4 +53,15 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ---
 
+## Session Labels（会话持久标签）
+
+- 脚本: `scripts/session_labels.ps1`
+- 存储: `memory/session-labels.json`
+- 用途: 给 `sessionKey` 绑定自定义名称，重启后仍可恢复（UI 原生 Label 可能丢失）
+
+示例：
+- 设置：`./scripts/session_labels.ps1 -Action set -SessionKey 'agent:main:main' -Label '主会话'`
+- 查看：`./scripts/session_labels.ps1 -Action list`
+- 按当前 sessions 解析：`./scripts/session_labels.ps1 -Action resolve`
+
 Add whatever helps you do your job. This is your cheat sheet.
