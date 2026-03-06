@@ -1,0 +1,46 @@
+﻿[
+    {
+        "event":  "US forces enter Iran by March 14?",
+        "amountUSD":  8146.41,
+        "orderTimeCN":  "2026-03-06 05:53:35",
+        "odds":  0.19,
+        "endTimeCN":  "2026-03-01 08:00:00",
+        "wallet":  "0x80c5b2b9d09808bf015bdbd377b3f32f7029333d",
+        "hitReasons":  "+12 low-odds(1%-20%)+heavy; +10 first-order-heavy(sampled)",
+        "score":  22,
+        "link":  "https://polymarket.com/event/us-forces-enter-iran-by-march-14-337"
+    },
+    {
+        "event":  "US x Iran ceasefire by March 6?",
+        "amountUSD":  7102,
+        "orderTimeCN":  "2026-03-06 05:54:47",
+        "odds":  0.002,
+        "endTimeCN":  "-",
+        "wallet":  "0x2f4e6de5b3392973f1af5a2016c20323e217fb86",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/us-x-iran-ceasefire-by-march-6"
+    },
+    {
+        "event":  "Will Iran close the Strait of Hormuz by March 31?",
+        "amountUSD":  5920.66,
+        "orderTimeCN":  "2026-03-06 05:55:45",
+        "odds":  0.69,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0x80a0da00fbdc8440b0ef601341f14c3e24795708",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-close-the-strait-of-hormuz-by-march-31"
+    },
+    {
+        "event":  "Will Mojtaba Khamenei be the next Supreme Leader of Iran?",
+        "amountUSD":  2584.05,
+        "orderTimeCN":  "2026-03-06 05:56:09",
+        "odds":  0.497,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0xe33129bee4aa0e02fa86ca62db088b78fba3dbbb",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-mojtaba-khamenei-be-the-next-supreme-leader-of-iran-573"
+    }
+]
