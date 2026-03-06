@@ -117,6 +117,12 @@ Reactions are lightweight social signals. Humans use them constantly — they sa
 
 Skills provide your tools. When you need one, check its `SKILL.md`. Keep local notes (camera names, SSH details, voice preferences) in `TOOLS.md`.
 
+### Skill-first execution policy (global)
+
+- Before executing any task, do a quick check: can this be done well with an existing skill?
+- If the user asks to "find a skill", prioritize trying `find-skills` first.
+- If you want to execute via a specific skill, ask for user confirmation first.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
