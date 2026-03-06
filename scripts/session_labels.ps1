@@ -1,5 +1,5 @@
 param(
-  [ValidateSet('set','get','remove','list','resolve')]
+  [ValidateSet('set','get','remove','list','resolve','autofill')]
   [string]$Action,
   [string]$SessionKey,
   [string]$SessionId,
@@ -49,7 +49,7 @@ function Load-Store {
   if (-not (Test-Path $storePath)) {
     return @{ updatedAt = (Get-Date).ToString('o'); labels = @{} }
   }
-  $raw = Get-Content -Raw -Path $storePath
+  $raw = Get-Content -Raw -Path $storePath -Encoding UTF8
   if ([string]::IsNullOrWhiteSpace($raw)) {
     return @{ updatedAt = (Get-Date).ToString('o'); labels = @{} }
   }
@@ -75,6 +75,25 @@ function Resolve-Key {
   }
 
   throw 'Provide -SessionKey or -SessionId'
+}
+
+function Get-DefaultLabel {
+  param([string]$AgentId)
+
+  switch ($AgentId) {
+    'main' { return 'main' }
+    'agent1-news' { return 'news' }
+    'agent2-polymarket' { return 'polymarket' }
+    'agent3-xhs' { return 'xhs-publish' }
+    'agent4-xhs' { return 'xhs-crawl' }
+    'video-stream' { return 'video-stream' }
+    'image-stream' { return 'image-stream' }
+    'x-chuangzuo' { return 'x-chuangzuo' }
+    default {
+      if ([string]::IsNullOrWhiteSpace($AgentId)) { return 'session' }
+      return $AgentId
+    }
+  }
 }
 
 if (-not $Action) {
@@ -143,5 +162,28 @@ switch ($Action) {
       }
     }
     $rows | ConvertTo-Json
+  }
+  'autofill' {
+    $sessions = openclaw sessions --all-agents --json | ConvertFrom-Json
+    $created = 0
+    $updated = 0
+    foreach ($s in $sessions.sessions) {
+      $k = "$($s.key)".ToLowerInvariant()
+      $label = Get-DefaultLabel -AgentId "$($s.agentId)"
+      if ($store.labels.Contains($k)) {
+        if ($store.labels[$k].label -ne $label) {
+          $store.labels[$k] = [ordered]@{ label = $label; updatedAt = (Get-Date).ToString('o') }
+          $updated++
+        }
+      } else {
+        $store.labels[$k] = [ordered]@{ label = $label; updatedAt = (Get-Date).ToString('o') }
+        $created++
+      }
+    }
+    $store.locked = $false
+    $store.autoByAgentId = $true
+    $store.note = 'Auto-generate session labels by agentId enabled.'
+    Save-Store $store
+    [pscustomobject]@{ totalSessions = $sessions.count; created = $created; updated = $updated; store = $storePath } | ConvertTo-Json
   }
 }

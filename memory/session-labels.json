@@ -1,15 +1,76 @@
-{
-  "updatedAt": "2026-03-05T13:57:00+08:00",
-  "locked": true,
-  "note": "用户要求会话 Label 写死到文件，后续不自动修改。",
-  "labels": {
-    "agent:main:main": {
-      "label": "主会话",
-      "updatedAt": "2026-03-05T13:06:22+08:00"
-    },
-    "agent:agent4-xhs:main": {
-      "label": "抓取",
-      "updatedAt": "2026-03-05T13:57:00+08:00"
-    }
-  }
+﻿{
+    "note":  "Auto-generate session labels by agentId enabled.",
+    "locked":  false,
+    "autoByAgentId":  true,
+    "updatedAt":  "2026-03-06T09:46:51.3662679+08:00",
+    "labels":  {
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:bb08cd4c-4854-461a-85b2-262b7efbb57c":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3533910+08:00"
+                                                                                                                            },
+                   "agent:main:main":  {
+                                           "label":  "main",
+                                           "updatedAt":  "2026-03-06T09:46:51.3511739+08:00"
+                                       },
+                   "agent:agent4-xhs:main":  {
+                                                 "updatedAt":  "2026-03-05T13:57:00+08:00",
+                                                 "label":  "抓取"
+                                             },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:e2ffabf7-ca29-4146-90e7-fb06577a1d71":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3544885+08:00"
+                                                                                                                            },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:35d1d5d1-3b5a-45ad-ae53-3725750067bc":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3544885+08:00"
+                                                                                                                            },
+                   "agent:video-stream:main":  {
+                                                   "label":  "video-stream",
+                                                   "updatedAt":  "2026-03-06T09:46:51.3521916+08:00"
+                                               },
+                   "agent:agent3-xhs:feishu:group:oc_488c88fa8a3512c719f5e258a834102e":  {
+                                                                                             "label":  "xhs-publish",
+                                                                                             "updatedAt":  "2026-03-06T09:46:51.3511739+08:00"
+                                                                                         },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:0006a72c-7927-4d9c-9056-7a3285576b85":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3544885+08:00"
+                                                                                                                            },
+                   "agent:image-stream:main":  {
+                                                   "label":  "image-stream",
+                                                   "updatedAt":  "2026-03-06T09:46:51.3419359+08:00"
+                                               },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:690b2537-ff8a-4a90-9ff6-9cfa17cb946c":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3555676+08:00"
+                                                                                                                            },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:b7a0b88d-ef4c-4e2d-b2f0-7b2f1ce4ddb3":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3533910+08:00"
+                                                                                                                            },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:e0f0cda1-ee9a-42b2-a6fd-a7e4d1053d00":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3544885+08:00"
+                                                                                                                            },
+                   "agent:agent1-news:feishu:group:oc_fa483d56bb555fbdbff8a5a081ab7719":  {
+                                                                                              "label":  "news",
+                                                                                              "updatedAt":  "2026-03-06T09:46:51.3521916+08:00"
+                                                                                          },
+                   "agent:agent4-xhs:feishu:group:oc_60339b8465be46313b85d9108d7af813":  {
+                                                                                             "label":  "xhs-crawl",
+                                                                                             "updatedAt":  "2026-03-06T09:46:51.3521916+08:00"
+                                                                                         },
+                   "agent:agent2-polymarket:feishu:group:oc_bcbb65bc961fe2ebc09ff2e902692b6e":  {
+                                                                                                    "label":  "polymarket",
+                                                                                                    "updatedAt":  "2026-03-06T09:46:51.3511739+08:00"
+                                                                                                },
+                   "agent:x-chuangzuo:feishu:group:oc_5d17cb2b055bcdede487f52e53b21938":  {
+                                                                                              "label":  "x-chuangzuo",
+                                                                                              "updatedAt":  "2026-03-06T09:46:51.3533910+08:00"
+                                                                                          },
+                   "agent:agent1-news:cron:9e2eaf96-0eab-455b-a17d-798f7ee52d92:run:3049fa17-ed7d-4719-8b43-53d4d559aee1":  {
+                                                                                                                                "label":  "news",
+                                                                                                                                "updatedAt":  "2026-03-06T09:46:51.3533910+08:00"
+                                                                                                                            }
+               }
 }
