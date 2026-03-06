@@ -8,6 +8,10 @@
     "polymarket-api": {
       "version": "1.0.0",
       "installedAt": 1772467577921
+    },
+    "tweet-writer": {
+      "version": "1.0.0",
+      "installedAt": 1772793429577
     }
   }
 }

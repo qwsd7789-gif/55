@@ -1,0 +1,41 @@
+﻿{
+  "input_image_path": "C:\\Users\\Administrator\\.openclaw\\workspace\\tmp\\img_6.png",
+  "uploaded_image_url": "https://liblibai-airship-temp.oss-cn-beijing.aliyuncs.com/aliyun-cn-prod/ebd4593bc7374a7cbaf9bad891017668.png",
+  "params": {
+    "v204": 2000,
+    "v205": 0.95,
+    "v206": 1
+  },
+  "generate_uuid": "147bcb682b404396a72e2dd5879cb89e",
+  "result": {
+    "generateUuid": "147bcb682b404396a72e2dd5879cb89e",
+    "generateStatus": 5,
+    "percentCompleted": 1.0,
+    "generateMsg": null,
+    "pointsCost": 10,
+    "accountBalance": 801,
+    "images": [
+      {
+        "imageUrl": "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/2b7b8df753486b65ea3c35afcfb9e05517b3d630f831c63ef500bf9055f57c6a.png",
+        "auditStatus": 3,
+        "nodeId": "207",
+        "outputName": "Image Comparer (rgthree)"
+      },
+      {
+        "imageUrl": "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/9962a7a0adbd2236a1ca1496a3185ecfc2071861be1af8d8d9ab16233e10f41b.png",
+        "auditStatus": 3,
+        "nodeId": "207",
+        "outputName": "Image Comparer (rgthree)"
+      },
+      {
+        "imageUrl": "https://liblibai-tmp-image.liblib.cloud/img/065c7707e67f4fc6980a92307bb7ac05/2b7b8df753486b65ea3c35afcfb9e05517b3d630f831c63ef500bf9055f57c6a.png",
+        "auditStatus": 3,
+        "nodeId": "208",
+        "outputName": "SaveImage"
+      }
+    ],
+    "videos": [],
+    "audios": [],
+    "texts": null
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "version":  "v1.6.10",
+    "releaseDate":  "2026-03-04T22:33:25Z",
+    "commit":  "136b1b1",
+    "branch":  "main",
+    "builds":  {
+                   "linux-amd64":  {
+                                       "url":  "https://dist.inference.sh/cli/inferencesh-cli-v1.6.10-linux-amd64.tar.gz",
+                                       "binaryName":  "inferencesh-cli-v1.6.10-linux-amd64.tar.gz",
+                                       "sha256":  "d2a5f3216086f6a04ec4d4df59d98368a53d764953edda64c003d40e36c22e7d"
+                                   },
+                   "linux-arm64":  {
+                                       "url":  "https://dist.inference.sh/cli/inferencesh-cli-v1.6.10-linux-arm64.tar.gz",
+                                       "binaryName":  "inferencesh-cli-v1.6.10-linux-arm64.tar.gz",
+                                       "sha256":  "0c9120fbafee1a4d70fd9a02315b6179eb2c4d6aa5a4595758968f3b64bc7b61"
+                                   },
+                   "darwin-amd64":  {
+                                        "url":  "https://dist.inference.sh/cli/inferencesh-cli-v1.6.10-darwin-amd64.tar.gz",
+                                        "binaryName":  "inferencesh-cli-v1.6.10-darwin-amd64.tar.gz",
+                                        "sha256":  "ee3af5caca6a81766f56c087823ffabbcdb423d4561c4ad522079fe296c0d55b"
+                                    },
+                   "darwin-arm64":  {
+                                        "url":  "https://dist.inference.sh/cli/inferencesh-cli-v1.6.10-darwin-arm64.tar.gz",
+                                        "binaryName":  "inferencesh-cli-v1.6.10-darwin-arm64.tar.gz",
+                                        "sha256":  "16fc6dadbedb2e512b7d7de8d822d8ed2180c6f1fc7369d0ea3ae5e4b4760d4e"
+                                    }
+               }
+}

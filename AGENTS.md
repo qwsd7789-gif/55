@@ -229,3 +229,7 @@ When a web link cannot be opened (login wall, anti-bot, render failure, or fetch
 - https://r.jina.ai/http://<original-url>
 - https://r.jina.ai/https://<original-url>
 Only if this fails, move to browser/manual alternatives.
+
+## Global Execution Rule
+在执行任何任务前，先检查是否有可用 skill。
+若存在可用 skill，优先按 skill 执行；若建议使用某 skill，先征求用户确认后再执行。
