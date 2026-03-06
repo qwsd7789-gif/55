@@ -223,3 +223,9 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+### Link Fetch Fallback (Global)
+When a web link cannot be opened (login wall, anti-bot, render failure, or fetch blocked), ALWAYS try r.jina.ai prefix first:
+- https://r.jina.ai/http://<original-url>
+- https://r.jina.ai/https://<original-url>
+Only if this fails, move to browser/manual alternatives.
