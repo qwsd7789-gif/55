@@ -61,6 +61,7 @@ $response = Invoke-RestMethod -Uri "https://ai.6551.io/open/news_search" -Method
 - 当用户要“找某个 skill”时，优先试用/调用 `find-skills` 技能。
 - 在执行任何任务前，先进行“是否可用已有 skill 完成”的快速检查，再确定执行路径。
 - 用户确认将“r.jina.ai 网页文本化前缀”作为常用经验纳入长期记忆。
+- 新增强规则：今后遇到链接打不开，默认优先尝试 `https://r.jina.ai/http://原始链接`（或 `https://r.jina.ai/https://原始链接`）进行文本化访问，再考虑其他抓取方案。
 
 ### 2025-03-02
 - 设置伊朗战争监控系统

@@ -123,6 +123,13 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - If the user asks to "find a skill", prioritize trying `find-skills` first.
 - If you want to execute via a specific skill, ask for user confirmation first.
 
+### Link-fetch fallback policy (global)
+
+- If a web link is inaccessible (login wall, anti-bot, render failure, or fetch blocked), first try the `r.jina.ai` text mirror prefix:
+  - `https://r.jina.ai/http://<original-url>`
+  - `https://r.jina.ai/https://<original-url>`
+- Only if this fails, move to browser/manual alternatives.
+
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
 **📝 Platform Formatting:**
