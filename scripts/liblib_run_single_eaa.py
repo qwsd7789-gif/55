@@ -45,14 +45,14 @@ def upload_local_image(path, ak, sk):
     return post_url.rstrip('/') + '/' + key
 
 
-def submit_and_poll(image_url, ak, sk):
+def submit_and_poll(image_url, ak, sk, v204=1480, v205=0.5, v206=1):
     body={
         'templateUuid':'4df2efa0f18d46dc9758803e478eb51c',
         'generateParams':{
             '203': {'class_type':'LoadImage','inputs': {'image': image_url}},
-            '204': {'class_type':'easy int','inputs': {'value': 1480}},
-            '205': {'class_type':'easy float','inputs': {'value': 0.5}},
-            '206': {'class_type':'easy int','inputs': {'value': 1}},
+            '204': {'class_type':'easy int','inputs': {'value': int(v204)}},
+            '205': {'class_type':'easy float','inputs': {'value': float(v205)}},
+            '206': {'class_type':'easy int','inputs': {'value': int(v206)}},
             'workflowUuid':'eaa51cebd2124d6bb165b8aaef93342b'
         }
     }
@@ -81,6 +81,9 @@ def main():
     ap.add_argument('--image-path', required=True)
     ap.add_argument('--ak', default=os.environ.get('LIBLIB_AK'))
     ap.add_argument('--sk', default=os.environ.get('LIBLIB_SK'))
+    ap.add_argument('--v204', type=int, default=1480)
+    ap.add_argument('--v205', type=float, default=0.5)
+    ap.add_argument('--v206', type=int, default=1)
     args=ap.parse_args()
 
     if not args.ak or not args.sk:
@@ -89,10 +92,11 @@ def main():
         raise SystemExit(f'Image not found: {args.image_path}')
 
     image_url=upload_local_image(args.image_path, args.ak, args.sk)
-    gid, result=submit_and_poll(image_url, args.ak, args.sk)
+    gid, result=submit_and_poll(image_url, args.ak, args.sk, args.v204, args.v205, args.v206)
     out={
         'input_image_path': args.image_path,
         'uploaded_image_url': image_url,
+        'params': {'v204': args.v204, 'v205': args.v205, 'v206': args.v206},
         'generate_uuid': gid,
         'result': result,
     }
