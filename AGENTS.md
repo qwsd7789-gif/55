@@ -229,7 +229,8 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 When a web link cannot be opened (login wall, anti-bot, render failure, or fetch blocked), ALWAYS auto-retry with r.jina.ai prefix first (no pre-retry confirmation):
 - https://r.jina.ai/http://<original-url>
 - https://r.jina.ai/https://<original-url>
-Only if this fails, move to browser/manual alternatives, and clearly state retry was attempted.
+If r.jina.ai retry still fails, immediately route to an appropriate specialized agent/automation path for fetching (e.g., browser-capable or platform-specific agent), then return results.
+Only if agent/automation fetch also fails, move to manual alternatives, and clearly state what retries were attempted.
 
 ## Global Execution Rule
 在执行任何任务前，先检查是否有可用 skill。
