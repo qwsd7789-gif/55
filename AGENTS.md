@@ -125,10 +125,11 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 
 ### Link-fetch fallback policy (global)
 
-- If a web link is inaccessible (login wall, anti-bot, render failure, or fetch blocked), first try the `r.jina.ai` text mirror prefix:
+- If a web link is inaccessible (login wall, anti-bot, render failure, or fetch blocked), **MUST** auto-retry with the `r.jina.ai` text mirror prefix first (no user prompt before retry):
   - `https://r.jina.ai/http://<original-url>`
   - `https://r.jina.ai/https://<original-url>`
-- Only if this fails, move to browser/manual alternatives.
+- Only if this auto-retry fails, provide alternatives (browser/manual/source replacement).
+- Do not skip this step or jump directly to asking the user to choose another path.
 
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
@@ -225,10 +226,10 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
 
 ### Link Fetch Fallback (Global)
-When a web link cannot be opened (login wall, anti-bot, render failure, or fetch blocked), ALWAYS try r.jina.ai prefix first:
+When a web link cannot be opened (login wall, anti-bot, render failure, or fetch blocked), ALWAYS auto-retry with r.jina.ai prefix first (no pre-retry confirmation):
 - https://r.jina.ai/http://<original-url>
 - https://r.jina.ai/https://<original-url>
-Only if this fails, move to browser/manual alternatives.
+Only if this fails, move to browser/manual alternatives, and clearly state retry was attempted.
 
 ## Global Execution Rule
 在执行任何任务前，先检查是否有可用 skill。
