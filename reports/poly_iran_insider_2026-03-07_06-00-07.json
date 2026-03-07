@@ -1,0 +1,24 @@
+﻿[
+    {
+        "event":  "Will the Iranian regime fall by March 31?",
+        "amountUSD":  3589.23,
+        "orderTimeCN":  "2026-03-07 05:52:07",
+        "odds":  0.102,
+        "endTimeCN":  "2026-03-31 08:00:00",
+        "wallet":  "0xcdb1f1ef8213c06911e4ba6a884176c5571e276c",
+        "hitReasons":  "+12 low-odds(1%-20%)+heavy; +10 first-order-heavy(sampled)",
+        "score":  22,
+        "link":  "https://polymarket.com/event/will-the-iranian-regime-fall-by-march-31"
+    },
+    {
+        "event":  "Iran x Israel/US conflict ends by March 7?",
+        "amountUSD":  8829.3,
+        "orderTimeCN":  "2026-03-07 05:56:43",
+        "odds":  0.003,
+        "endTimeCN":  "2026-03-31 08:00:00",
+        "wallet":  "0x122cdd9db64fd8dc3ebab813218e3effe21f821f",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/iran-x-israelus-conflict-ends-by-march-7"
+    }
+]
