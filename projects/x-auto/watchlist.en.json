@@ -1,0 +1,33 @@
+{
+  "updated_at": "2026-03-07T15:47:00+08:00",
+  "categories": {
+    "middle_east": [
+      {"handle":"MiddleEastEye","priority":"high"},
+      {"handle":"AlMonitor","priority":"high"},
+      {"handle":"ReutersWorld","priority":"high"},
+      {"handle":"TheNationalNews","priority":"high"},
+      {"handle":"haaretzcom","priority":"medium"}
+    ],
+    "crypto": [
+      {"handle":"WuBlockchain","priority":"high"},
+      {"handle":"TheBlock__","priority":"high"},
+      {"handle":"glassnode","priority":"high"},
+      {"handle":"lookonchain","priority":"high"},
+      {"handle":"MessariCrypto","priority":"high"}
+    ],
+    "us_stocks": [
+      {"handle":"business","priority":"high"},
+      {"handle":"ReutersBiz","priority":"high"},
+      {"handle":"CNBC","priority":"high"},
+      {"handle":"Benzinga","priority":"high"},
+      {"handle":"unusual_whales","priority":"high"}
+    ],
+    "ai": [
+      {"handle":"OpenAI","priority":"high"},
+      {"handle":"AnthropicAI","priority":"high"},
+      {"handle":"GoogleDeepMind","priority":"high"},
+      {"handle":"huggingface","priority":"high"},
+      {"handle":"karpathy","priority":"high"}
+    ]
+  }
+}
