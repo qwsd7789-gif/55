@@ -1,0 +1,44 @@
+{
+  "persona": {
+    "name": "数字货币+时政+美股博主",
+    "style": ["信息密度高", "先事实后观点", "控制情绪化", "短句", "给出可执行结论"],
+    "languages": ["en", "zh"],
+    "format": "EN headline + ZH insight"
+  },
+  "schedule": {
+    "intervalMinutes": 60,
+    "maxPostsPerRun": 1,
+    "timezone": "Asia/Shanghai"
+  },
+  "topics": ["middle east", "crypto", "us stocks", "ai"],
+  "watchAccounts": [
+    "kobeissiletter",
+    "WatcherGuru",
+    "TheBlock__",
+    "DeItaone",
+    "litcapital",
+    "sama",
+    "karpathy",
+    "AnthropicAI",
+    "rawsalerts",
+    "sentdefender"
+  ],
+  "scoring": {
+    "minScore": 70,
+    "weights": {
+      "recency": 0.3,
+      "impact": 0.3,
+      "crossSource": 0.2,
+      "personaFit": 0.2
+    }
+  },
+  "pipeline": {
+    "sources": ["tikhub-twitter", "opennews-6551"],
+    "dedupe": "simhash",
+    "rewriteModel": "openai-codex/gpt-5.3-codex",
+    "publish": {
+      "channel": "x",
+      "mode": "auto"
+    }
+  }
+}
