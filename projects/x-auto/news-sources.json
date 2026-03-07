@@ -1,0 +1,92 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-03-07T16:30:00+08:00",
+  "focus": ["ai", "middle_east", "crypto", "us_stocks"],
+  "sources": {
+    "tier_1_primary": [
+      {
+        "id": "reuters_world",
+        "type": "x_account",
+        "handle": "ReutersWorld",
+        "domain": "reuters.com",
+        "language": "en",
+        "category": ["middle_east", "macro"],
+        "priority": "high"
+      },
+      {
+        "id": "ap",
+        "type": "x_account",
+        "handle": "AP",
+        "domain": "apnews.com",
+        "language": "en",
+        "category": ["middle_east", "breaking"],
+        "priority": "high"
+      },
+      {
+        "id": "bbc_world",
+        "type": "x_account",
+        "handle": "BBCWorld",
+        "domain": "bbc.com",
+        "language": "en",
+        "category": ["middle_east", "world"],
+        "priority": "high"
+      },
+      {
+        "id": "al_monitor",
+        "type": "x_account",
+        "handle": "AlMonitor",
+        "domain": "al-monitor.com",
+        "language": "en",
+        "category": ["middle_east", "policy"],
+        "priority": "high"
+      },
+      {
+        "id": "the_national_news",
+        "type": "x_account",
+        "handle": "TheNationalNews",
+        "domain": "thenationalnews.com",
+        "language": "en",
+        "category": ["middle_east", "regional"],
+        "priority": "high"
+      },
+      {
+        "id": "coindesk",
+        "type": "news_site",
+        "domain": "coindesk.com",
+        "language": "en",
+        "category": ["crypto", "macro"],
+        "priority": "high"
+      },
+      {
+        "id": "cointelegraph",
+        "type": "news_site",
+        "domain": "cointelegraph.com",
+        "language": "en",
+        "category": ["crypto", "onchain"],
+        "priority": "high"
+      },
+      {
+        "id": "opennews_6551",
+        "type": "api",
+        "endpoint": "https://ai.6551.io/open/news_search",
+        "language": "mixed",
+        "category": ["middle_east", "crypto", "ai", "us_stocks"],
+        "priority": "high",
+        "auth": "OPENNEWS_TOKEN"
+      }
+    ]
+  },
+  "selection_rules": {
+    "language": "en_first",
+    "min_ai_score": 70,
+    "cross_source_confirm": 2,
+    "max_age_minutes": 180,
+    "exclude_if_no_link": true
+  },
+  "rewrite_policy": {
+    "style": "blogger_narrative",
+    "structure": "front_half_story_back_half_analysis",
+    "must_include": ["what_happened", "market_impact", "one_clear_conclusion"],
+    "max_length_chars": 900
+  }
+}

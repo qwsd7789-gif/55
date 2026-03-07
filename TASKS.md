@@ -4,6 +4,10 @@
 
 ## Todo
 
+- [ ] P1 先确定“AI+中东”发布用新闻源白名单并固化到自动流程
+  - 截止：今天
+  - 备注：已选源（英文优先）= ReutersWorld / AP / BBCWorld / AlMonitor / TheNationalNews / CoinDesk / Cointelegraph / OpenNews(6551) 聚合；完成后再按模板改写并入发布队列
+
 - [ ] P1 盘点并整理当前可用 skills（按场景分组）
   - 截止：本周
   - 备注：输出“内容创作/财经/开发/办公自动化”四类清单
