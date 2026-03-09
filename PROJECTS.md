@@ -21,6 +21,24 @@
 **Next Step**: 用 find-skills 筛选并安装“memory management / context”相关技能
 **Source**: 本会话安装结果
 
+## Suxi / Gemini 图片重绘工作流
+**Goal**: 基于本地 XHS HTML/图片批量调用 Suxi 的 `gemini-2.5-flash-image` 做重绘，并自动输出原图/生成图 HTML 对照页
+**Status**: 已跑通，可批量执行
+**关键路径**:
+- API Base URL: `OPENAI_BASE_URL=https://new.suxi.ai/v1`
+- 认证: `SUXI_API_KEY`（或兼容 `OPENAI_API_KEY`）
+- 默认模型: `gemini-2.5-flash-image`
+- 入口脚本: `workspace/suxi_image.mjs`
+- 已存在多份批处理脚本，支持不同篇数/图序号/提示词模板
+**已验证经验**:
+- API 路线优先于网页自动化，适合批量处理
+- 若接口返回 `No inline image`，常见原因是模型回了文字说明而非图片数据
+- 提示词中加入“不要输出任何解释文字，只返回最终生成的图片结果”后，成功率明显提高
+- `fetch failed` 更像链路抖动，重试常可恢复
+- `model_not_found` / “无可用渠道” 说明 Suxi 上游分发临时不可用，稍后重试可能恢复
+**Next Step**: 将现有批处理脚本收敛为一个可参数化通用脚本（支持篇数范围、倒数选择、图片序号、提示词模板）
+**Source**: 2026-03-09 会话批量执行结果
+
 ---
 
 ## Migration Rules
