@@ -1,0 +1,57 @@
+﻿[
+    {
+        "event":  "Will Iran announce a new supreme leader on March 9, 2026?",
+        "amountUSD":  6527.68,
+        "orderTimeCN":  "2026-03-09 05:57:47",
+        "odds":  0.961,
+        "endTimeCN":  "2026-03-31 08:00:00",
+        "wallet":  "0x00214c04756be68cb9b1e189b63d804084e6a361",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-announce-a-new-supreme-leader-on-march-9-2026"
+    },
+    {
+        "event":  "Will US or Israel strike Iran on March 9, 2026?",
+        "amountUSD":  5080,
+        "orderTimeCN":  "2026-03-09 05:54:03",
+        "odds":  0.995,
+        "endTimeCN":  "2026-03-10 08:00:00",
+        "wallet":  "0x2c18fc1449d5fb66217484f0ca3f97d0c7373570",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-us-or-israel-strike-iran-on-march-9-2026"
+    },
+    {
+        "event":  "Will Mojtaba Khamenei be the next Supreme Leader of Iran?",
+        "amountUSD":  2380.19,
+        "orderTimeCN":  "2026-03-09 05:55:51",
+        "odds":  0.998,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0x3fdf3e4b1d86ddd1b6ca0ccf4ba387ecf6721561",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-mojtaba-khamenei-be-the-next-supreme-leader-of-iran-573"
+    },
+    {
+        "event":  "Will Crude Oil (CL) hit (HIGH) $100 by end of March?",
+        "amountUSD":  2039.85,
+        "orderTimeCN":  "2026-03-09 05:57:51",
+        "odds":  0.92,
+        "endTimeCN":  "2026-03-31 08:00:00",
+        "wallet":  "0xb61bc51a955e974b684a6b01b55979f4df23b6c3",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-crude-oil-cl-hit-high-100-by-end-of-march-658-396-769-971"
+    },
+    {
+        "event":  "Will Iran announce a new supreme leader on March 9, 2026?",
+        "amountUSD":  2171.42,
+        "orderTimeCN":  "2026-03-09 05:57:43",
+        "odds":  0.961,
+        "endTimeCN":  "2026-03-31 08:00:00",
+        "wallet":  "0xdaef2be2a19ad331737d06545f85615b094554e9",
+        "hitReasons":  "-",
+        "score":  0,
+        "link":  "https://polymarket.com/event/will-iran-announce-a-new-supreme-leader-on-march-9-2026"
+    }
+]
