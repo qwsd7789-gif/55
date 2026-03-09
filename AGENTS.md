@@ -120,8 +120,12 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 ### Skill-first execution policy (global)
 
 - Before executing any task, do a quick check: can this be done well with an existing skill?
+- For finding data, opening websites, or using a capability, first check already-installed skills and prefer using them before external sources or ad-hoc external methods.
 - If the user asks to "find a skill", prioritize trying `find-skills` first.
+- When the user asks about any skill, prefer using `find-skills` to discover candidates; when presenting options, include install count and concrete functionality before giving recommendations.
 - If you want to execute via a specific skill, ask for user confirmation first.
+- Unless the user says otherwise, install new skills globally so they are visible to and reusable by all agents.
+- Unless the user says otherwise, prefer configuring API keys / tokens / cookies / credentials in shared global locations so other agents can reuse them, rather than keeping them only in the current agent/session.
 
 ### Link-fetch fallback policy (global)
 
