@@ -1,0 +1,61 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "参考这张图片的主题，重新生成一张新的图片。要求：保留核心元素，改变背景为室内暖光环境、极简风，改变角度，不要和原图一样。重要：不要输出任何解释文字、不要输出说明、不要输出markdown，只返回最终生成的图片结果。",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 3,
+      "title": "3. 水晶店主的理货Plog18 | 是细腻冬日的感召",
+      "items": [
+        {
+          "imageNumber": 2,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note3-img2.png",
+          "ok": true
+        },
+        {
+          "imageNumber": 3,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note3-img3.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 4,
+      "title": "4. 喜金💰人的本命手串",
+      "items": [
+        {
+          "imageNumber": 2,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note4-img2.png",
+          "ok": true
+        },
+        {
+          "imageNumber": 3,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note4-img3.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 5,
+      "title": "5. Live图直出✨分享我的7条漂亮水晶手串",
+      "items": [
+        {
+          "imageNumber": 2,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6806f7c0000000001b03e2bb\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note5-img2.png",
+          "ok": true
+        },
+        {
+          "imageNumber": 3,
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6806f7c0000000001b03e2bb\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-3to5-img23-warm-1773049123139\\note5-img3.png",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

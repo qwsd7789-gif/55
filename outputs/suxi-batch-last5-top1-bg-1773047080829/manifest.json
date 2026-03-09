@@ -1,0 +1,62 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "更换背景 重绘制图片",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 12,
+      "title": "12. 文玩女孩挑战当红手串搭配｜手串设计｜《青翠》",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\68bd5374000000001c03ef93\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-last5-top1-bg-1773047080829\\note12-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 13,
+      "title": "13. 🍂✨枫叶秋阳｜新中式串珠搭配",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\68ea074f000000000700f9c6\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-last5-top1-bg-1773047080829\\note13-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 14,
+      "title": "14. 粉色加倍｜原创设计手串之水蜜桃味的那片海～",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\68eb837c0000000007036a93\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-last5-top1-bg-1773047080829\\note14-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 15,
+      "title": "15. 世外桃源🎀🍇🍀",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\69764816000000000e00f236\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-last5-top1-bg-1773047080829\\note15-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 16,
+      "title": "16. 💎水晶叠戴高能组合",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\69772fe9000000002203b346\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-last5-top1-bg-1773047080829\\note16-img1.png",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

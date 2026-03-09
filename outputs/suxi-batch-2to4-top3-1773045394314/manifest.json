@@ -1,0 +1,70 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "提取爆款元素 重绘制图片 更换相近背景",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 2,
+      "title": "2. 水晶店主的理货Plog17 | 美到谁了我不说✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note2-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note2-img2.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note2-img3.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 3,
+      "title": "3. 水晶店主的理货Plog18 | 是细腻冬日的感召",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note3-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note3-img2.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note3-img3.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 4,
+      "title": "4. 喜金💰人的本命手串",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note4-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note4-img2.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\03.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to4-top3-1773045394314\\note4-img3.png",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "提取爆款元素 重绘制图片",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 2,
+      "title": "2. 水晶店主的理货Plog17 | 美到谁了我不说✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164923580954000MruemyKa)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 3,
+      "title": "3. 水晶店主的理货Plog18 | 是细腻冬日的感召",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164924950709418OgYRL5hY)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 4,
+      "title": "4. 喜金💰人的本命手串",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164925256219060msq85CYo)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 5,
+      "title": "5. Live图直出✨分享我的7条漂亮水晶手串",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6806f7c0000000001b03e2bb\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164925558485037rtFlxsli)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 6,
+      "title": "6. 没事画画手串一天就过去了……",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6811237400000000220299ff\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164925805902700IHZaEKOv)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 7,
+      "title": "7. 🍧粉黛｜也太温柔了吧~",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6818df2200000000230007c9\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164926116793779isYFO6pm)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    },
+    {
+      "noteIndex": 8,
+      "title": "8. 蜜桃·芝士·浅樱🍑✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\688b828e0000000004001ec5\\01.jpg",
+          "error": "HTTP 503: {\"error\":{\"code\":\"model_not_found\",\"message\":\"分组 gemini 下模型 gemini-2.5-flash-image 无可用渠道（distributor） (request id: 20260309164926405780427UIgsVAAB)\",\"type\":\"new_api_error\"}}",
+          "ok": false
+        }
+      ]
+    }
+  ]
+}

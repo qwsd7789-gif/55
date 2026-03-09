@@ -1,0 +1,84 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "提取爆款元素 重绘制图片 更换背景",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 2,
+      "title": "2. 水晶店主的理货Plog17 | 美到谁了我不说✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note2-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 3,
+      "title": "3. 水晶店主的理货Plog18 | 是细腻冬日的感召",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\67419d2e0000000006015c8d\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note3-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 4,
+      "title": "4. 喜金💰人的本命手串",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note4-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 5,
+      "title": "5. Live图直出✨分享我的7条漂亮水晶手串",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6806f7c0000000001b03e2bb\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note5-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 6,
+      "title": "6. 没事画画手串一天就过去了……",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6811237400000000220299ff\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note6-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 7,
+      "title": "7. 🍧粉黛｜也太温柔了吧~",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6818df2200000000230007c9\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note7-img1.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 8,
+      "title": "8. 蜜桃·芝士·浅樱🍑✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\688b828e0000000004001ec5\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-2to8-top1-1773045769907\\note8-img1.png",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "参考这张图片的主题，重新生成一张新的图片。要求：保留核心元素，改变背景、光线，不要和原图一样。重要：不要输出任何解释文字、不要输出说明、不要输出markdown，只返回最终生成的图片结果。",
+  "manifest": [
+    {
+      "noteIndex": 2,
+      "title": "2. 水晶店主的理货Plog17 | 美到谁了我不说✨",
+      "imagePath": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6733254c000000003c01a99e\\01.jpg",
+      "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-retry-force-image-1773048535726\\note2-img1.png",
+      "ok": true
+    },
+    {
+      "noteIndex": 4,
+      "title": "4. 喜金💰人的本命手串",
+      "imagePath": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\676cea79000000001300c3ce\\01.jpg",
+      "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-retry-force-image-1773048535726\\note4-img1.png",
+      "ok": true
+    }
+  ]
+}

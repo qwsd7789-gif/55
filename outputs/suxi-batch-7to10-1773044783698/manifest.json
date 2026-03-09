@@ -1,0 +1,71 @@
+{
+  "model": "gemini-2.5-flash-image",
+  "prompt": "提取爆款元素 重绘制图片保持手串大小不变 包含 简约艺术自然元素风格",
+  "sourceHtml": "D:\\xhs_exports\\collected\\html\\xhs_partial_completed_like100_2026-03-06_23-47-46.html",
+  "manifest": [
+    {
+      "noteIndex": 7,
+      "title": "7. 🍧粉黛｜也太温柔了吧~",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6818df2200000000230007c9\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note7-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\6818df2200000000230007c9\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note7-img2.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 8,
+      "title": "8. 蜜桃·芝士·浅樱🍑✨",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\688b828e0000000004001ec5\\01.jpg",
+          "error": "No inline image: {\"id\":\"chatcmpl-20260309162648248624558PtsDKa7q\",\"model\":\"gemini-2.5-flash-image\",\"object\":\"chat.completion\",\"created\":1773044809,\"choices\":[{\"index\":0,\"message\":{\"role\":\"assistant\",\"content\":\"当然，这是根据您的描述重新绘制的图片，保持了手串大小不变，并融入了简约艺术自然元素风格。\\n\"},\"finish_reason\":\"stop\"}],\"usage\":{\"prompt_tokens\":279,\"completion_tokens\":28,\"total_tokens\":307,\"prompt_tokens_details\":{\"cached_tokens\":0,\"text_tokens\":21,\"audio_tokens\":0,\"image_tokens\":0},\"completion_tokens_details\":{\"text_tokens\":0,\"audio_tokens\":0,\"reasoning_tokens\":0},\"input_tokens\":0,\"output_tokens\":0,\"input_tokens_details\":null,\"claude_cache_creation_5_m_tokens\":0,\"claude_cache_creation_1_h_tokens\":0}}",
+          "ok": false
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\688b828e0000000004001ec5\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note8-img2.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 9,
+      "title": "9. 超绝复刻｜我做什么都会成功的",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\689a05a00000000022020390\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note9-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\689a05a00000000022020390\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note9-img2.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "noteIndex": 10,
+      "title": "10. 在秋天里过夏天🌳🍂",
+      "items": [
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\68a094a1000000001d00f1e6\\01.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note10-img1.png",
+          "ok": true
+        },
+        {
+          "original": "D:\\xhs_exports\\collected\\images\\2026-03-06_18-29-51\\68a094a1000000001d00f1e6\\02.jpg",
+          "generated": "C:\\Users\\Administrator\\.openclaw\\workspace\\outputs\\suxi-batch-7to10-1773044783698\\note10-img2.png",
+          "ok": true
+        }
+      ]
+    }
+  ]
+}
