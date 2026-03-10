@@ -1,0 +1,24 @@
+﻿[
+    {
+        "event":  "Iran leadership change by March 31?",
+        "amountUSD":  2988,
+        "orderTimeCN":  "2026-03-10 05:52:31",
+        "odds":  0.37,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0xbb656b64336292a2c87f40d2cc703cf4c2c4369f",
+        "hitReasons":  "+15 new-wallet(\u003c5d); +10 first-order-heavy(sampled)",
+        "score":  25,
+        "link":  "https://polymarket.com/event/iran-leadership-change-by-march-31"
+    },
+    {
+        "event":  "Will Iran close the Strait of Hormuz by March 31?",
+        "amountUSD":  7950.69,
+        "orderTimeCN":  "2026-03-10 05:52:27",
+        "odds":  0.968,
+        "endTimeCN":  "2026-12-31 08:00:00",
+        "wallet":  "0x000d257d2dc7616feaef4ae0f14600fdf50a758e",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/will-iran-close-the-strait-of-hormuz-by-march-31"
+    }
+]
