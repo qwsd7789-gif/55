@@ -126,6 +126,9 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - If you want to execute via a specific skill, ask for user confirmation first.
 - Unless the user says otherwise, install new skills globally so they are visible to and reusable by all agents.
 - Unless the user says otherwise, prefer configuring API keys / tokens / cookies / credentials in shared global locations so other agents can reuse them, rather than keeping them only in the current agent/session.
+- `video-copy-analyzer` is approved as a shared global skill for all agents.
+- When a user provides a video link/file and wants transcript extraction, copy extraction, subtitle extraction, or wants the assistant to understand the spoken content of the video, prefer `video-copy-analyzer` automatically.
+- This includes Xiaohongshu, Douyin, Bilibili, YouTube and other video links whenever the task is fundamentally “extract/understand the video’s spoken/script content”.
 
 ### Link-fetch fallback policy (global)
 
