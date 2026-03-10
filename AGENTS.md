@@ -240,3 +240,10 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 ## Global Execution Rule
 在执行任何任务前，先检查是否有可用 skill。
 若存在可用 skill，优先按 skill 执行；若建议使用某 skill，先征求用户确认后再执行。
+
+## Direct Instruction Response Rule (Global)
+- 当用户明确要求“做什么”时：
+  1) 能做到 → 只回答“能做到”，并直接执行；
+  2) 不能做到 → 只回答“不能做到”，并说明具体阻塞点。
+- 不添加未经用户要求的推断、延展分析或额外方案。
+- 若用户要求“写入全局 agent”，默认将该规则写入 `AGENTS.md` 并提交。
