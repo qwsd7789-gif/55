@@ -132,8 +132,9 @@ Skills provide your tools. When you need one, check its `SKILL.md`. Keep local n
 - If a web link is inaccessible (login wall, anti-bot, render failure, or fetch blocked), **MUST** auto-retry with the `r.jina.ai` text mirror prefix first (no user prompt before retry):
   - `https://r.jina.ai/http://<original-url>`
   - `https://r.jina.ai/https://<original-url>`
-- Only if this auto-retry fails, provide alternatives (browser/manual/source replacement).
-- Do not skip this step or jump directly to asking the user to choose another path.
+- If this auto-retry fails, **immediately** use a scraping-capable path (prefer Scrapling-based fetching) before any manual fallback.
+- Only if Scrapling/automation fetch also fails, provide manual alternatives (browser/source replacement), and clearly state what retries were attempted.
+- Do not skip these steps or jump directly to asking the user to choose another path.
 
 **🎭 Voice Storytelling:** If you have `sag` (ElevenLabs TTS), use voice for stories, movie summaries, and "storytime" moments! Way more engaging than walls of text. Surprise people with funny voices.
 
@@ -233,8 +234,8 @@ This is a starting point. Add your own conventions, style, and rules as you figu
 When a web link cannot be opened (login wall, anti-bot, render failure, or fetch blocked), ALWAYS auto-retry with r.jina.ai prefix first (no pre-retry confirmation):
 - https://r.jina.ai/http://<original-url>
 - https://r.jina.ai/https://<original-url>
-If r.jina.ai retry still fails, immediately route to an appropriate specialized agent/automation path for fetching (e.g., browser-capable or platform-specific agent), then return results.
-Only if agent/automation fetch also fails, move to manual alternatives, and clearly state what retries were attempted.
+If r.jina.ai retry still fails, immediately route to a scraping-capable automation path (prefer Scrapling-based fetching), then return results.
+Only if Scrapling/automation fetch also fails, move to manual alternatives, and clearly state what retries were attempted.
 
 ## Global Execution Rule
 在执行任何任务前，先检查是否有可用 skill。
