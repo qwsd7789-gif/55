@@ -32,6 +32,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **默认触发**: 用户给出视频链接/视频文件，并要求提取文案、字幕、口播内容，或要求理解视频内容
 - **适用平台**: 小红书、抖音、B站、YouTube 等
 - **当前状态**: 已可用；2026-03-10 已修复阶段2所需 ffmpeg 环境
+
+## ASR 转写默认路径
+- **默认工具**: `coli asr`（本地离线）
+- **安装状态**: ✅ `@marswave/coli` 已安装
+- **备用工具**: `openai-whisper`（需要时用于可调模型/批处理）
 ---
 ## 小红书 (Xiaohongshu)
 - **发布模式**: 直接发布（不再询问确认）
