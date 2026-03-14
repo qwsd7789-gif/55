@@ -1,0 +1,11 @@
+﻿{
+    "event":  "Will the Iranian regime fall by March 31?",
+    "amountUSD":  5127.73,
+    "orderTimeCN":  "2026-03-14 05:54:37",
+    "odds":  0.043,
+    "endTimeCN":  "2026-03-31 08:00:00",
+    "wallet":  "0x3ab5ad27c676c4be1218397912eab5396e6de56f",
+    "hitReasons":  "+12 low-odds(1%-20%)+heavy; +10 first-order-heavy(sampled)",
+    "score":  22,
+    "link":  "https://polymarket.com/event/will-the-iranian-regime-fall-by-march-31"
+}
