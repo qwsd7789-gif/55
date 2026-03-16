@@ -55,6 +55,10 @@ $response = Invoke-RestMethod -Uri "https://ai.6551.io/open/news_search" -Method
 
 ## 📅 时间线
 
+### 2026-03-16
+- 用户新增偏好：Reddit 定时简报默认翻译成中文输出。
+- 展示格式偏好：按“各板块 Top3 + 中文标题 + 原帖链接”呈现，优先手机端可读。
+
 ### 2026-03-10
 - 用户确认将 `video-copy-analyzer` 作为共享全局 skill，供所有 agent 默认复用。
 - 新增全局规则：当链接或文件中包含视频，且用户需求是“提取视频文案 / 提取字幕 / 获取口播内容 / 理解视频内容”时，默认优先使用 `video-copy-analyzer`。
