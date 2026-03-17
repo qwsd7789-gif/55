@@ -12,6 +12,10 @@
     "tweet-writer": {
       "version": "1.0.0",
       "installedAt": 1772793429577
+    },
+    "aibtc": {
+      "version": "1.0.7",
+      "installedAt": 1773752296638
     }
   }
 }
