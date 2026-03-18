@@ -1,0 +1,9 @@
+﻿universe,gate,top_pct,version,window,assets_used,avg_holding_count,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits,benchmark_total_return_pct,benchmark_cagr_pct,benchmark_mdd_pct,benchmark_sharpe
+SP500_constituents_current,SPY,5%,no_stop,2016-01-04~2026-03-17,502,20.59,1016.35,40.96,-43.0,1.229,,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,5%,stop12_clear,2016-01-04~2026-03-17,502,18.65,529.83,29.94,-31.49,1.132,432.0,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,10%,no_stop,2016-01-04~2026-03-17,502,41.66,515.17,29.5,-39.14,1.076,,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,10%,stop12_clear,2016-01-04~2026-03-17,502,38.52,295.51,21.61,-27.23,0.982,730.0,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,15%,no_stop,2016-01-04~2026-03-17,502,62.83,420.92,26.47,-37.39,1.054,,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,15%,stop12_clear,2016-01-04~2026-03-17,502,58.76,251.34,19.58,-25.24,0.964,976.0,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,20%,no_stop,2016-01-04~2026-03-17,502,83.96,344.59,23.65,-36.86,1.003,,293.33,21.52,-33.72,1.013
+SP500_constituents_current,SPY,20%,stop12_clear,2016-01-04~2026-03-17,502,79.12,221.78,18.09,-24.3,0.94,1175.0,293.33,21.52,-33.72,1.013

@@ -1,0 +1,2 @@
+﻿window,strategy,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits,qqq_total_return_pct,qqq_cagr_pct,qqq_mdd_pct,qqq_sharpe
+2016-01-04 ~ 2026-03-13,E_single_stop12_fullclear,787.77,23.94,-60.88,0.7,39,482.96,18.68,-35.12,0.881

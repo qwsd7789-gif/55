@@ -1,0 +1,9 @@
+﻿universe,gate,top_pct,version,window,assets_used,avg_holding_count,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits,benchmark_total_return_pct,benchmark_cagr_pct,benchmark_mdd_pct,benchmark_sharpe
+QQQ_constituents_current,QQQ,5%,no_stop,2016-01-04~2026-03-17,100,3.62,2892.09,62.19,-43.13,1.311,,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,5%,stop12_clear,2016-01-04~2026-03-17,100,3.14,1079.69,42.07,-57.14,1.114,102.0,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,10%,no_stop,2016-01-04~2026-03-17,100,7.69,1998.95,54.21,-39.81,1.324,,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,10%,stop12_clear,2016-01-04~2026-03-17,100,6.78,1054.89,41.64,-47.21,1.242,197.0,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,15%,no_stop,2016-01-04~2026-03-17,100,11.75,1328.42,45.99,-37.1,1.258,,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,15%,stop12_clear,2016-01-04~2026-03-17,100,10.53,626.11,32.59,-43.02,1.121,269.0,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,20%,no_stop,2016-01-04~2026-03-17,100,15.83,928.23,39.32,-34.72,1.175,,491.79,28.79,-35.12,1.08
+QQQ_constituents_current,QQQ,20%,stop12_clear,2016-01-04~2026-03-17,100,14.27,448.56,27.41,-39.18,1.034,347.0,491.79,28.79,-35.12,1.08

@@ -1,0 +1,5 @@
+﻿gate_mode,with_stop12,window,assets_used,avg_holding_count,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits
+single,False,2016-01-04~2026-03-17,275,3.59,1333.05,46.06,-48.98,1.138,
+single,True,2016-01-04~2026-03-17,275,3.14,368.01,24.56,-49.46,0.826,100.0
+dual,False,2016-01-04~2026-03-17,275,3.2,993.86,40.55,-41.09,1.055,
+dual,True,2016-01-04~2026-03-17,275,2.85,450.84,27.48,-40.78,0.902,81.0

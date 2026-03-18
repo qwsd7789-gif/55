@@ -1,0 +1,2 @@
+﻿strategy,window,assets_used,avg_holding_count,total_return_pct,cagr_pct,mdd_pct,sharpe,spy_total_return_pct,spy_cagr_pct,spy_mdd_pct,spy_sharpe
+SP500_mom12_1_top20_monthly,2016-01-04~2026-03-17,502,96.57,494.32,28.87,-36.86,1.133,293.33,21.52,-33.72,1.013

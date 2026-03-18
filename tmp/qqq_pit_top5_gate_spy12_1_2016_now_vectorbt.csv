@@ -1,0 +1,3 @@
+﻿strategy,window,assets_used,avg_holding_count,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits,bench_QQQ_total_return_pct,bench_QQQ_cagr_pct,bench_SPY_total_return_pct,bench_SPY_cagr_pct
+QQQ_PIT_top5_gate_SPY12_1_no_stop,2016-01-04~2026-03-17,275,3.59,1097.42,42.38,-48.21,1.086,,491.79,28.79,293.33,21.52
+QQQ_PIT_top5_gate_SPY12_1_stop12_clear,2016-01-04~2026-03-17,275,3.14,289.3,21.34,-48.49,0.756,100.0,491.79,28.79,293.33,21.52

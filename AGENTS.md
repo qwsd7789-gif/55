@@ -244,6 +244,14 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 在执行任何任务前，先检查是否有可用 skill。
 若存在可用 skill，优先按 skill 执行；若建议使用某 skill，先征求用户确认后再执行。
 
+## 回测引擎默认规则（当前主会话 agent）
+- 在本会话进行股票/ETF/策略回测时，若用户未特别指定引擎，默认使用 **vectorbt**。
+- 仅当用户明确要求“非 vectorbt”时，才切换其他实现。
+
+## 回测指标口径（当前主会话 agent）
+- 所有“年化”统一使用 **复合年化收益率（CAGR）**。
+- 若未特别说明，默认公式：`CAGR = (NAV_end / NAV_start)^(年化因子) - 1`（按交易日口径换算）。
+
 ## Direct Instruction Response Rule (Global)
 - 当用户明确要求“做什么”时：
   1) 能做到 → 只回答“能做到”，并直接执行；

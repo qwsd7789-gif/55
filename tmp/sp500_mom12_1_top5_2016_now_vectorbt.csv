@@ -1,0 +1,4 @@
+﻿strategy,window,total_return_pct,cagr_pct,mdd_pct,sharpe,stop_hits
+SP500_top5_no_stop,2016-01-04~2026-03-17,1018.13,40.99,-42.19,1.23,
+SP500_top5_stop12_clear,2016-01-04~2026-03-17,522.09,29.71,-31.8,1.125,425
+SPY_buy_hold,2016-01-04~2026-03-17,293.33,21.52,-33.72,1.013,

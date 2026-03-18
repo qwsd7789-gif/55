@@ -1,0 +1,4 @@
+﻿window,strategy,total_return_pct,cagr_pct,mdd_pct,sharpe
+2016-01-04 ~ 2026-03-13,E_with_stop_fees,1431.73,30.76,-62.9,0.815
+2016-01-04 ~ 2026-03-13,E_without_stop_fees,1463.99,31.03,-62.78,0.819
+2016-01-04 ~ 2026-03-13,QQQ_buy_hold,482.96,18.68,-35.12,0.881
