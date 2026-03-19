@@ -7,6 +7,13 @@
 **Next Step**: 网络恢复后立即补发完整简报，并持续按心跳频率执行
 **Source**: memory/2026-03-02.md
 
+## Polymarket 伊朗停战盘口监控
+**Goal**: 每天 08:00 / 20:00 监控伊朗停战相关盘口，推送停战概率及较上次变化
+**Status**: 脚本已创建并跑通，待接入 cron
+**Scope**: `us-x-iran-ceasefire-by-march-31`、`us-x-iran-ceasefire-by-april-15-182`、`us-x-iran-ceasefire-by-april-30-194`、`trump-announces-end-of-military-operations-against-iran-by-march-31st`
+**Output**: `reports/poly_iran_ceasefire/*.md` + `memory/poly_iran_ceasefire_state.json`
+**Source**: 2026-03-19 本会话
+
 ## Workspace 自动备份（GitHub）
 **Goal**: 每12小时自动备份 workspace 到 GitHub
 **Status**: 已启用并完成首次推送
