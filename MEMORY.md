@@ -58,6 +58,8 @@ $response = Invoke-RestMethod -Uri "https://ai.6551.io/open/news_search" -Method
 ### 2026-03-16
 - 用户新增偏好：Reddit 定时简报默认翻译成中文输出。
 - 展示格式偏好：按“各板块 Top3 + 中文标题 + 原帖链接”呈现，优先手机端可读。
+### 2026-03-19
+- 用户将 Reddit 每日热点抓取/推送板块调整为：地缘政治、石油、股票、数字货币。
 
 ### 2026-03-10
 - 用户确认将 `video-copy-analyzer` 作为共享全局 skill，供所有 agent 默认复用。

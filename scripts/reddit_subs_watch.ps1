@@ -7,11 +7,14 @@ param(
 $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
-$subs = @(
-  'AskReddit','BeAmazed','cats','Damnthatsinteresting','Fauxmoi','formula1','interesting','interestingasfuck',
-  'jobs','LivestreamFail','magicTCG','mildlyinfuriating','movies','news','okbuddycinephile','OldSchoolCool',
-  'pics','politics','SipsTea','StarWars','todayilearned','Wellthatsucks','whoathatsinteresting','worldnews'
-)
+$categories = [ordered]@{
+  '地缘政治' = @('geopolitics','worldnews','politics','CredibleDefense','InternationalNews')
+  '石油'     = @('oil','energy','Commodities','OilandGasWorkers','Energy')
+  '股票'     = @('stocks','investing','StockMarket','SecurityAnalysis','ValueInvesting')
+  '数字货币' = @('CryptoCurrency','Bitcoin','ethereum','CryptoMarkets','ethtrader')
+}
+
+$subs = @($categories.Values | ForEach-Object { $_ } | Select-Object -Unique)
 
 $headers = @{ 'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) OpenClaw/1.0' }
 
@@ -105,6 +108,23 @@ foreach ($p in $topGlobal) {
   $u = "https://reddit.com$($p.permalink)"
   $lines += "- [$($p.score)] r/$($p.subreddit) | comments $($p.comments) | $($p.title)"
   $lines += "  - $u"
+}
+$lines += ""
+$lines += "## Per-category Top 3"
+foreach ($cat in $categories.Keys) {
+  $lines += ""
+  $lines += "### $cat"
+  $catSubs = @($categories[$cat])
+  $catPosts = $all | Where-Object { $catSubs -contains $_.subreddit } | Sort-Object score -Descending | Select-Object -First 3
+  if ($catPosts.Count -eq 0) {
+    $lines += "- 暂无数据"
+    continue
+  }
+  foreach ($p in $catPosts) {
+    $u = "https://reddit.com$($p.permalink)"
+    $lines += "- [$($p.score)] r/$($p.subreddit) | comments $($p.comments) | $($p.title)"
+    $lines += "  - $u"
+  }
 }
 $lines += ""
 $lines += "## Per-subreddit top 1"
