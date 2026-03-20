@@ -4,7 +4,7 @@
 - name: Check Breaking Finance News
   schedule: "0 */2 * * *"
   timezone: "Asia/Shanghai"
-  enabled: true
+  enabled: false
   sources:
     rss:
       - name: "Al Jazeera"

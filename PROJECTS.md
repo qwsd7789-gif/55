@@ -2,9 +2,9 @@
 
 ## 伊朗战争监控简报
 **Goal**: 每30分钟输出可靠简报（多信源）
-**Status**: 运行中（当前受网络策略影响）
-**Blockers**: 外网访问受限（RSS/GitHub/部分API握手失败）
-**Next Step**: 网络恢复后立即补发完整简报，并持续按心跳频率执行
+**Status**: 已停止
+**Blockers**: 无
+**Next Step**: 如用户重新开启，再恢复监控与推送
 **Source**: memory/2026-03-02.md
 
 ## Polymarket 伊朗停战盘口监控
