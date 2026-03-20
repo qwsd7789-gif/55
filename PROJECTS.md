@@ -14,6 +14,13 @@
 **Output**: `reports/poly_iran_ceasefire/*.md` + `memory/poly_iran_ceasefire_state.json`
 **Source**: 2026-03-19 本会话
 
+## ClawChain 自动挖矿
+**Goal**: 每 10 分钟自动执行一轮 ClawChain 挖矿
+**Status**: 已启用
+**Blockers**: 无（高阶题型收益受本机 LLM API key 配置影响）
+**Next Step**: 持续观察成功率与奖励积累，必要时补充 LLM key 提高可解题型覆盖率
+**Source**: 2026-03-20 本会话
+
 ## Workspace 自动备份（GitHub）
 **Goal**: 每12小时自动备份 workspace 到 GitHub
 **Status**: 已启用并完成首次推送
