@@ -8,10 +8,9 @@ $ErrorActionPreference = 'Stop'
 [Console]::OutputEncoding = [System.Text.UTF8Encoding]::new()
 
 $categories = [ordered]@{
-  '地缘政治' = @('geopolitics','worldnews','politics','CredibleDefense','InternationalNews')
-  '石油'     = @('oil','energy','Commodities','OilandGasWorkers','Energy')
-  '股票'     = @('stocks','investing','StockMarket','SecurityAnalysis','ValueInvesting')
-  '数字货币' = @('CryptoCurrency','Bitcoin','ethereum','CryptoMarkets','ethtrader')
+  '财经' = @('economics','finance','investing','SecurityAnalysis','ValueInvesting')
+  '股票' = @('stocks','StockMarket','wallstreetbets','options','Bogleheads')
+  '伊朗' = @('iran','NewIran','geopolitics','worldnews','CredibleDefense')
 }
 
 $subs = @($categories.Values | ForEach-Object { $_ } | Select-Object -Unique)

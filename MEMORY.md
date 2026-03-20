@@ -61,6 +61,9 @@ $response = Invoke-RestMethod -Uri "https://ai.6551.io/open/news_search" -Method
 ### 2026-03-19
 - 用户将 Reddit 每日热点抓取/推送板块调整为：地缘政治、石油、股票、数字货币。
 
+### 2026-03-20
+- 用户将 Reddit 抓取方向进一步调整为：财经、股票、伊朗。
+
 ### 2026-03-10
 - 用户确认将 `video-copy-analyzer` 作为共享全局 skill，供所有 agent 默认复用。
 - 新增全局规则：当链接或文件中包含视频，且用户需求是“提取视频文案 / 提取字幕 / 获取口播内容 / 理解视频内容”时，默认优先使用 `video-copy-analyzer`。
