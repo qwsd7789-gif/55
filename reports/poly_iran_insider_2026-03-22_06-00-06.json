@@ -1,0 +1,35 @@
+﻿[
+    {
+        "event":  "US x Iran ceasefire by March 31?",
+        "amountUSD":  4600,
+        "orderTimeCN":  "2026-03-22 05:55:47",
+        "odds":  0.08,
+        "endTimeCN":  "-",
+        "wallet":  "0x35417b3d09d7a0991f75d7cc95162a6e34d7462e",
+        "hitReasons":  "+12 low-odds(1%-20%)+heavy",
+        "score":  12,
+        "link":  "https://polymarket.com/event/us-x-iran-ceasefire-by-march-31"
+    },
+    {
+        "event":  "US x Iran ceasefire by March 31?",
+        "amountUSD":  2740.47,
+        "orderTimeCN":  "2026-03-22 05:55:47",
+        "odds":  0.08,
+        "endTimeCN":  "-",
+        "wallet":  "0x35417b3d09d7a0991f75d7cc95162a6e34d7462e",
+        "hitReasons":  "+12 low-odds(1%-20%)+heavy",
+        "score":  12,
+        "link":  "https://polymarket.com/event/us-x-iran-ceasefire-by-march-31"
+    },
+    {
+        "event":  "US x Iran ceasefire by April 15?",
+        "amountUSD":  2000,
+        "orderTimeCN":  "2026-03-22 05:58:23",
+        "odds":  0.24,
+        "endTimeCN":  "2026-04-15 08:00:00",
+        "wallet":  "0x302d4c75b52c80a50188ffcb460d2d2c0f8d6d6f",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/us-x-iran-ceasefire-by-april-15-182"
+    }
+]
