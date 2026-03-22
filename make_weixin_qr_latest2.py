@@ -1,0 +1,40 @@
+from PIL import Image, ImageDraw
+qr = '''▄▄
+█ ▄▄▄ █▀ █▀█▀▄█▀▄▀▄▄▀ ▀█ ▄▄▄ █
+█ █   █▀ ▄ █▀▄ ▀▄██ █▄█ █   █
+█ █▄▄█ █▀█ █▄▄ ▀ █▀▄▀▄▄▀█ █▄▄█ █
+█▄▄█▄█▄█ █ ▀▄█▄█ ▀ █ ▀▄█▄▄█
+█ ▄  ▄█▄▄  ▄█▄▄▀█ ▄▀█▀▄ ▄█ █ ▀ ██
+█ ▀▄  ▄▄▄▀▄ ▄▀ ▀█ █▀ ▀█▀▄ ▀ █ ▄▀▄█
+██▀█▄▄█ ▄▀█▄ ▄▀█ ██ ▄▀▄▄ ▀▄█
+█▄▀██ ▄▀▄▄ █▀ ▄ █▀█  █▀ █▀  █▀ ▄▀▄▄ █
+█▄▄ ▄▀▄█▀ ██▄█▄▀ ▄▀▄▀▄▀▄ █▀▄▄ ▄ ▀▄█
+█▀▄ ▀ ▄▀█▄  ▄█▀ ▀▄▄▀█▀██ ▄ ▀ █▄▄ █
+█   ▄██▄ ▄█▄▄▀▄ ▄▀▄▀▄ ▀▄▀█▀▄▄█▄▄  ▄█
+█▄▄▀█▀█▄▄█ █▀ ▄ ███   ███▀▄▄██▄█▄ █
+█▀  ▀ ▄▄▄▀ █▄█▄█▀▄▄▀█▀▄ ▀▄▀█▄ ▄   ▄█
+█ █  ▄ ▀ █ ▄█▀▄██ ▀▄ ██▄▄ ▄▀▄████▄ █
+█▄█▄▄█▀ ▄▀▄▀▄▄▀▄▄ ▀ ▄▄▄ █▄██
+█ ▄▄▄ █▄█ █▀ ▄▀▄▀██ ▀██▀ █▄█ ▄█  █
+█ █   █ ▀ █▄█▄▄█▄▄ ▄▀▄ ▄    ▄▀█
+█ █▄▄█ █ ▀  ▄█▀▄▄█▄█▄▀▄▀▄█▄▀▄▀ ███▄ █
+█▄▄█▄█▄▄██▄▄██▄▄██▄▄██▄▄█'''
+lines = qr.splitlines()
+cell = 24
+w = max(len(line) for line in lines) * cell
+h = len(lines) * cell
+img = Image.new('RGB', (w, h), 'white')
+d = ImageDraw.Draw(img)
+for y, line in enumerate(lines):
+    for x, ch in enumerate(line):
+        x0 = x * cell
+        y0 = y * cell
+        if ch == '█':
+            d.rectangle([x0, y0, x0 + cell - 1, y0 + cell - 1], fill='black')
+        elif ch == '▀':
+            d.rectangle([x0, y0, x0 + cell - 1, y0 + cell // 2 - 1], fill='black')
+        elif ch == '▄':
+            d.rectangle([x0, y0 + cell // 2, x0 + cell - 1, y0 + cell - 1], fill='black')
+out = r'C:\Users\Administrator\.openclaw\workspace\weixin-qr-latest.png'
+img.save(out)
+print(out)

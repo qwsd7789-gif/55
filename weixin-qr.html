@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>微信扫码二维码</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f5f7fb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #111827;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.08);
+      padding: 24px;
+      max-width: 92vw;
+      text-align: center;
+    }
+    img {
+      width: min(78vw, 420px);
+      height: auto;
+      image-rendering: pixelated;
+      border: 12px solid #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,.08);
+      background: white;
+    }
+    .hint {
+      margin-top: 14px;
+      font-size: 14px;
+      color: #4b5563;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>微信扫码登录</h2>
+    <img alt="微信二维码" src="data:image/png;base64,MAEEgHACCQDgBAIB0AgEA6AACBdAAAAukAADx/Emr+OMb87zX/NM7MH5+Zf/LzT2P+MJG7/Litc0Zbn6ibvHUAAALpAAAE0gEACKQDABBIBwAgkA4AQCAdAIBAOgAAz5+EumnrjMz8UZ0zW7/X/Cs8M/8Kt/LXxsm/77963joAAIF0AAAC6QAABNIBAAikAwAQSAcAIJAOAEAgHQCA4N4C0mLz56du2joJxW/u16tOw5DUe538z/i/USahAICn8z8sAIBAOgAAgXQAAALpAAAE0gEACKQDABBIBwAguLpKtHWIwxW+l60zMls/66atQ21bbX16v8dfobcOAEAgHQCAQDoAAIF0AAAC6QAABNIBAAikAwAQSAcAIPjzdeTm9MTN0Y+b5o9+3LT1NLZO1pzZOlo1/7Pmm3/yZ76X3i9vHQCAQDoAAIF0AAAC6QAABNIBAAikAwAQSAcAIJAOAEDwBmsV84duzpiR4X2f+flDNyaGXnUaN229y/N56wAABNIBAAikAwAQSAcAIJAOAEAgHQCAQDoAAIF0AACCP18X3ZzU2DpmctP8GZn5gzBnnzX/DLea/0T5VTKBtw4AQCAdAIBAOgAAgXQAAALpAAAE0gEACKQDABBIBwAg+N467rT1CreexlbzB5fmP703zf+luMLHz/CMk//NWwcAIJAOAEAgHQCAQDoAAIF0AAAC6QAABNIBAAikAwAQ/Pk6Mn/axdwK7ztnNP/pnW/+gM/8z/JEverk5/PWAQAIpAMAEEgHACCQDgBAIB0AgEA6AACBdAAAAukAADx/Emr+3Mr8MZObw0TzR5Dcr/ey9Vc5//c1/2/vTfNP42f8M3/GWwcAIJAOAEAgHQCAQDoAAIF0AAAC6QAABNIBAAikAwDw/EmoreMYJlA+4eRvPodbx7jm/1Ju2vr3cP4T5eRfxVsHACCQDgBAIB0AgEA6AACBdAAAAukAAATSAQAIpAMAEBzuumydkbn5vXzWe53hmflXeGb+07uVX8onnOHP+GfeWwcAIJAOAEAgHQCAQDoAAIF0AAAC6QAABNIBAAikAwAQXF2emT+pMf+zztwcGPG9Hrf16Z0/dDPf/JM3aPa4+b8Ubx0AgEA6AACBdAAAAukAAATSAQAIpAMAEEgHACCQDgBAcLhKNH9gZP4Vntk64DP/DG/aer+Mp/Fvn6ib5v/duMlbBwAgkA4AQCAdAIBAOgAAgXQAAALpAAAE0gEACKQDABBMX+F4C/OHbraP5Bl3OlVtp78TfP/sm39Vc7nrQMAEEgHACCQDgBAIB0AgEA6AACBdAAAAukAAATSAQAI/nwdMY7xCQMjW6ddtrp5Gk7+E+aM5n/WmfmnMZ+3DgBAIB0AgEA6AACBdAAAAukAAATSAQAIpAMAEEgHAOD5k1BbZ2RuznfMn1uZP+1y0/wz9FmPn+FWTsNp/FveOgAAgXQAAALpAAAE0gEACKQDABBIBwAgkA4AQCAdAICpk1DzZ5p4nGGiTxh3usn3+oT7xXvx1gEACKQDABBIBwAgkA4AgHQAAJ7DWwcAIJAOAEAgHQCAXZNQW5n9edVpnDFM9F7DRFvdfObn32XzU6/irQMAEEgHACCQDgBAIB0AgEA6AACBdAAAAukAAATSAQAITEK9bPZn/pjJ/BGkm591dhpbB3zmPxvzf19b/27c5Il61a/SWwcAIJAOAEAgHQCAQDoAAIF0AAAC6QAABNIBAAikAwCwaxLKBMpvZmRe9UQ5+cdPY+v9unkaZzy9r/o35XvphJe3DgBAIB0AgEA6AACBdAAAAukAAATSAQAIpAMAEEgHACA4XKvYOgizdbLmzNYzPLP1Cs/M/15br9BdfvwMeZy3DgBAIB0AgEA6AACBdAAAAukAAATSAQAIpAMAEEgHACC4tyEDAP+QSahX8dYBAikAwAQSAcAIJAOAEAgHQCAQDoAAIF0AAAC6QAAfP29/wMZKd39sCcqnQAAAABJRU5ErkJgg==" />
+    <div class="hint">如果二维码过期，告诉我，我给你刷新一张新的。</div>
+  </div>
+</body>
+</html>
