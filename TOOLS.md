@@ -47,6 +47,11 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - 增强: 失败分类统计 + 自动补抓（`-BackfillPasses`）
   - 示例: `./scripts/xhs_collect_notes.ps1 -Keyword "留学申请" -Top 20 -Retry 2 -BackfillPasses 1 -ReuseExistingTab`
 ---
+## 网页打开与抓取
+- **默认优先工具**: `opencli`
+- **适用场景**: 与用户对话时，需要打开网页、读取网页内容、抓取页面数据
+- **执行顺序**: 先尝试 `opencli` → 若不适用/不支持/失败，再改用其他抓取方案
+---
 ## Session Labels（会话持久标签）
 - 脚本: `scripts/session_labels.ps1`
 - 存储: `memory/session-labels.json`
