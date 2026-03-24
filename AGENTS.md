@@ -244,6 +244,17 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 在执行任何任务前，先检查是否有可用 skill。
 若存在可用 skill，优先按 skill 执行；若建议使用某 skill，先征求用户确认后再执行。
 
+## 抖音视频下载 SOP（全局）
+- 当用户提供抖音分享链接并要求“下载视频/保存视频/提取视频到本地”时，默认优先使用：
+  - 仓库：`C:\Users\Administrator\.openclaw\workspace\video-expert-analyzer`
+  - 脚本：`scripts\download_douyin.py`
+- 默认执行顺序：
+ 1) 先创建输出目录
+ 2) 设置 Windows Python UTF-8 环境变量：`$env:PYTHONUTF8='1'`、`$env:PYTHONIOENCODING='utf-8'`
+ 3) 再运行 `download_douyin.py`
+- 默认不要先直接使用 `pipeline_enhanced.py` 下载抖音；当前仓库版本存在错误导入：`ModuleNotFoundError: No module named 'douyin_downloader'`
+- 默认在下载完成后用 `Get-Item` 校验输出文件路径、大小、时间，再把最终落地路径回复给用户
+- 详细流程见：`docs/douyin-download-sop.md`
 ## 回测引擎默认规则（当前主会话 agent）
 - 在本会话进行股票/ETF/策略回测时，若用户未特别指定引擎，默认使用 **vectorbt**。
 - 仅当用户明确要求“非 vectorbt”时，才切换其他实现。
