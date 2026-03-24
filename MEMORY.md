@@ -65,6 +65,9 @@ $response = Invoke-RestMethod -Uri "https://ai.6551.io/open/news_search" -Method
 - 用户将 Reddit 抓取方向进一步调整为：财经、股票、伊朗。
 - 用户开始尝试 ClawChain 挖矿，已完成本机矿工初始化与首轮成功提交。
 
+### 2026-03-24
+- 用户再次调整 Reddit 抓取/推送板块，今后默认仅抓取：财经、股票、数字货币、政治、战争。
+
 ### 2026-03-10
 - 用户确认将 `video-copy-analyzer` 作为共享全局 skill，供所有 agent 默认复用。
 - 新增全局规则：当链接或文件中包含视频，且用户需求是“提取视频文案 / 提取字幕 / 获取口播内容 / 理解视频内容”时，默认优先使用 `video-copy-analyzer`。
