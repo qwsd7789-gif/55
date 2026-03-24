@@ -1,36 +1,36 @@
 {
   "history": {
     "us-x-iran-ceasefire-by-march-31": {
-      "ts": "2026-03-22T20:00:15.221242+08:00",
-      "yes_prob": 0.095,
-      "no_prob": 0.905,
-      "liquidity": 361672.2697,
-      "volume": 16573519.190708093,
-      "volume24h": 1981372.1191009996
-    },
-    "us-x-iran-ceasefire-by-april-15-182": {
-      "ts": "2026-03-22T20:00:15.221242+08:00",
-      "yes_prob": 0.265,
-      "no_prob": 0.735,
-      "liquidity": 84715.7664,
-      "volume": 2118573.5235559945,
-      "volume24h": 775334.2093600004
-    },
-    "us-x-iran-ceasefire-by-april-30-194": {
-      "ts": "2026-03-22T20:00:15.221242+08:00",
-      "yes_prob": 0.355,
-      "no_prob": 0.645,
-      "liquidity": 97251.7567,
-      "volume": 3872040.2836809843,
-      "volume24h": 280718.77084399975
-    },
-    "trump-announces-end-of-military-operations-against-iran-by-march-31st": {
-      "ts": "2026-03-22T20:00:15.221242+08:00",
+      "ts": "2026-03-24T20:00:15.649285+08:00",
       "yes_prob": 0.115,
       "no_prob": 0.885,
-      "liquidity": 112653.017,
-      "volume": 2683667.4873419856,
-      "volume24h": 273459.243198
+      "liquidity": 864872.5902,
+      "volume": 23763476.786762662,
+      "volume24h": 4063819.314175979
+    },
+    "us-x-iran-ceasefire-by-april-15-182": {
+      "ts": "2026-03-24T20:00:15.649285+08:00",
+      "yes_prob": 0.315,
+      "no_prob": 0.685,
+      "liquidity": 117966.2616,
+      "volume": 3781247.7636149423,
+      "volume24h": 848597.2523089992
+    },
+    "us-x-iran-ceasefire-by-april-30-194": {
+      "ts": "2026-03-24T20:00:15.649285+08:00",
+      "yes_prob": 0.44,
+      "no_prob": 0.56,
+      "liquidity": 230535.5135,
+      "volume": 4583244.267190011,
+      "volume24h": 396985.15461399907
+    },
+    "trump-announces-end-of-military-operations-against-iran-by-march-31st": {
+      "ts": "2026-03-24T20:00:15.649285+08:00",
+      "yes_prob": 0.175,
+      "no_prob": 0.825,
+      "liquidity": 169331.8471,
+      "volume": 3469995.6442219657,
+      "volume24h": 432762.37973199994
     }
   }
 }

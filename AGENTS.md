@@ -255,6 +255,18 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 - 默认不要先直接使用 `pipeline_enhanced.py` 下载抖音；当前仓库版本存在错误导入：`ModuleNotFoundError: No module named 'douyin_downloader'`
 - 默认在下载完成后用 `Get-Item` 校验输出文件路径、大小、时间，再把最终落地路径回复给用户
 - 详细流程见：`docs/douyin-download-sop.md`
+## Live Chrome 接管（全局）
+- 已全局安装共享 skill：`C:\Users\Administrator\.openclaw\skills\chrome-cdp-skill`
+- 其中标准 skill 入口为：`C:\Users\Administrator\.openclaw\skills\chrome-cdp-skill\skills\chrome-cdp\SKILL.md`
+- 当需要“直接管用户当前主 Chrome 会话、复用已登录页面状态、读取当前打开标签页”时，优先考虑使用该 skill 路径
+- 依赖前提：Chrome 需在 `chrome://inspect/#remote-debugging` 中开启 remote debugging
+## Firecrawl（全局）
+- 已全局安装共享 skill：`~\.agents\skills\firecrawl`（OpenClaw 已可见）
+- 适合：网页抓取增强、结构化提取、动态页面处理、批量 crawl、agent research
+- 不用于替代本地主 Chrome 接管；本地主会话复用仍优先 `chrome-cdp-skill`
+- 选型建议：
+  - 要复用“你当前 Chrome 已登录状态” → 用 `chrome-cdp-skill`
+  - 要做“云端网页抓取 / 搜索 / 结构化提取 / 整站 crawl” → 用 Firecrawl
 ## 回测引擎默认规则（当前主会话 agent）
 - 在本会话进行股票/ETF/策略回测时，若用户未特别指定引擎，默认使用 **vectorbt**。
 - 仅当用户明确要求“非 vectorbt”时，才切换其他实现。
