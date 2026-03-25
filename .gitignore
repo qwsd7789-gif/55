@@ -7,3 +7,7 @@ node_modules/
 opennews-mcp/
 
 .openclaw/skills/XiaohongshuSkills/
+
+# X / browser grab secrets and local tool state
+tools/feedgrab/sessions/
+temp_get_x_cookies.py
