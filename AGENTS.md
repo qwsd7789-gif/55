@@ -260,6 +260,15 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 - 其中标准 skill 入口为：`C:\Users\Administrator\.openclaw\skills\chrome-cdp-skill\skills\chrome-cdp\SKILL.md`
 - 当需要“直接管用户当前主 Chrome 会话、复用已登录页面状态、读取当前打开标签页”时，优先考虑使用该 skill 路径
 - 依赖前提：Chrome 需在 `chrome://inspect/#remote-debugging` 中开启 remote debugging
+## X（Twitter）抓取默认 SOP（全局）
+- 当前默认主工具：`C:\Users\Administrator\.openclaw\workspace\tools\feedgrab`
+- SOP 文档：`docs/x-grab-sop.md`
+- 默认尝试顺序：
+ 1) 先用 `feedgrab` 直接抓原始 X 链接，优先拿正文
+ 2) 若需要更完整数据，优先检查/复用 `tools/feedgrab/sessions/x.json`
+ 3) 若没有可用 cookie，且用户同意，再尝试接管主 Chrome（`chrome-cdp-skill`）
+ 4) 若 Chrome 接管不稳定，不长时间死磕，立即切到“用户手动提供 `auth_token` + `ct0` 写入 `sessions/x.json`”
+- 当前环境经验：Chrome 页签接管可部分打通，但 CDP 直接抽 X cookie 不稳定；手动写入 `sessions/x.json` 是当前最稳兜底路径
 ## Firecrawl（全局）
 - 已全局安装共享 skill：`~\.agents\skills\firecrawl`（OpenClaw 已可见）
 - 适合：网页抓取增强、结构化提取、动态页面处理、批量 crawl、agent research
