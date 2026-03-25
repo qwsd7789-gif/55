@@ -1,12 +1,12 @@
 {
   "history": {
     "us-x-iran-ceasefire-by-march-31": {
-      "ts": "2026-03-24T20:00:15.649285+08:00",
-      "yes_prob": 0.115,
-      "no_prob": 0.885,
-      "liquidity": 864872.5902,
-      "volume": 23763476.786762662,
-      "volume24h": 4063819.314175979
+      "ts": "2026-03-25T08:07:30.975107+08:00",
+      "yes_prob": 0.195,
+      "no_prob": 0.805,
+      "liquidity": 441432.5743,
+      "volume": 26380321.769578584,
+      "volume24h": 3619612.1332629984
     },
     "us-x-iran-ceasefire-by-april-15-182": {
       "ts": "2026-03-24T20:00:15.649285+08:00",
@@ -25,12 +25,12 @@
       "volume24h": 396985.15461399907
     },
     "trump-announces-end-of-military-operations-against-iran-by-march-31st": {
-      "ts": "2026-03-24T20:00:15.649285+08:00",
-      "yes_prob": 0.175,
-      "no_prob": 0.825,
-      "liquidity": 169331.8471,
-      "volume": 3469995.6442219657,
-      "volume24h": 432762.37973199994
+      "ts": "2026-03-25T08:07:30.975107+08:00",
+      "yes_prob": 0.205,
+      "no_prob": 0.795,
+      "liquidity": 78999.7357,
+      "volume": 3788372.554040966,
+      "volume24h": 473775.613585
     }
   }
 }
