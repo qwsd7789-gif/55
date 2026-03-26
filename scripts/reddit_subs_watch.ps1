@@ -10,7 +10,9 @@ $ErrorActionPreference = 'Stop'
 $categories = [ordered]@{
   '财经' = @('economics','finance','investing','SecurityAnalysis','ValueInvesting')
   '股票' = @('stocks','StockMarket','wallstreetbets','options','Bogleheads')
-  '伊朗' = @('iran','NewIran','geopolitics','worldnews','CredibleDefense')
+  '数字货币' = @('CryptoCurrency','Bitcoin','Ethereum','ethtrader','CryptoMarkets')
+  '政治' = @('politics','PoliticalDiscussion','PoliticalCompassMemes','Conservative','democrats')
+  '战争' = @('war','geopolitics','worldnews','CredibleDefense','CombatFootage')
 }
 
 $subs = @($categories.Values | ForEach-Object { $_ } | Select-Object -Unique)
