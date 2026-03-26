@@ -243,6 +243,13 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 ## Global Execution Rule
 在执行任何任务前，先检查是否有可用 skill。
 若存在可用 skill，优先按 skill 执行；若建议使用某 skill，先征求用户确认后再执行。
+## X 链接抓取默认顺序（全局）
+- 当用户发送 X / Twitter 链接并要求读取、抓取、提取内容时，默认按以下顺序执行：
+ 1) `feedgrab`
+ 2) `opencli`
+ 3) `r.jina.ai` 文本化回退
+- 仅当上一步不适用、不可用或失败时，才进入下一步。
+- 若链接无法直接访问，仍保留全局链接失败兜底规则；但对 X 链接的默认优先级以上述顺序为准。
 
 ## 抖音视频下载 SOP（全局）
 - 当用户提供抖音分享链接并要求“下载视频/保存视频/提取视频到本地”时，默认优先使用：
