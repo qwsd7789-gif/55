@@ -60,7 +60,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
   - 写操作优先 `--dry-run`（如支持）
   - 遇到不熟悉的 API，先跑 `lark-cli schema <api>`
   - 不在回复中泄露 token / secret / app credential
-- **当前状态**: 2026-03-28 检查发现本机尚未安装 `lark-cli`，后续使用前需先执行：`npm install -g @larksuite/cli`
+- **当前状态**: 2026-03-28 已完成 `lark-cli` 安装、飞书应用配置、用户登录和 doctor 健康检查；当前可直接用于飞书消息/文件发送
+- **身份经验**:
+  - `im +messages-send` 发消息时，默认显式带 `--as bot`
+  - 用户接收方优先使用 `lark-cli auth status` 返回的当前 app 下 `userOpenId`，避免 `open_id cross app`
+- **本地文件发送 SOP**:
+  - 图片：若源文件不在当前工作目录，先复制到 workspace 下临时目录，再用相对路径发送（`--image ./file.jpg`）
+  - 视频：先复制到 workspace 下临时目录，再生成封面图后发送（`--video ./video.mp4 --video-cover ./cover.jpg`）
+  - `lark-cli` 对本地媒体路径要求较严格，优先使用“切到目标目录 + 相对路径”方式
 ---
 ## Session Labels（会话持久标签）
 - 脚本: `scripts/session_labels.ps1`
