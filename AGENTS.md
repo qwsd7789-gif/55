@@ -269,11 +269,13 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 - 依赖前提：Chrome 需在 `chrome://inspect/#remote-debugging` 中开启 remote debugging
 ## 飞书本地文件发送默认 SOP（全局）
 - 当用户要求“把本机上的图片/视频/文件发到飞书给我”时，默认优先使用 **`lark-cli`** 完成发送。
+- 这条规则适用于以后所有“本地图片 / 本地视频 / 本地文件发给我 / 发到飞书给我 / 从桌面或 D 盘找一个发我”等同类请求，默认按 `lark-cli` 路径执行。
 - 默认发送身份：显式使用 `--as bot`。
 - 接收方 ID：优先使用当前 `lark-cli auth status` 返回的当前 app 下 `userOpenId`，不要直接假设消息元数据里的 sender id 可复用；若出现 `open_id cross app`，立即切换到当前 app 的 `userOpenId`。
 - 本地媒体文件路径规则：`lark-cli` 发送图片/视频时优先使用“复制到 workspace 临时目录 → 切到目标目录 → 用相对路径发送”的方式，避免直接传绝对路径。
 - 图片发送：使用 `lark-cli im +messages-send --as bot --user-id <open_id> --image ./file.jpg`。
 - 视频发送：先生成封面图，再使用 `lark-cli im +messages-send --as bot --user-id <open_id> --video ./video.mp4 --video-cover ./cover.jpg`。
+- 普通文件发送：默认也优先使用 `lark-cli` 文件消息能力处理；若是本地路径，同样优先走“复制到 workspace 临时目录 + 相对路径”方式。
 - 若用户只说“随便找一张/一个发我”，可在本机常见路径（如桌面、D 盘）中自行挑选一个小文件完成测试发送。
 ## X（Twitter）抓取默认 SOP（全局）
 - 当前默认主工具：`C:\Users\Administrator\.openclaw\workspace\tools\feedgrab`
