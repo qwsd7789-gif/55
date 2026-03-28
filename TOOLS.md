@@ -52,6 +52,16 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **适用场景**: 与用户对话时，需要打开网页、读取网页内容、抓取页面数据
 - **执行顺序**: 先尝试 `opencli` → 若不适用/不支持/失败，再改用其他抓取方案
 ---
+## 飞书命令默认路径
+- **默认优先工具**: `lark-cli`（`@larksuite/cli`）
+- **适用场景**: 以后凡是涉及飞书 / Lark 开放平台命令、消息、日历、文档、云盘、多维表格、邮箱、通讯录、知识库、会议等操作，默认优先尝试 `lark-cli`
+- **执行顺序**: 先检查 `lark-cli` 是否已安装并可用 → 优先使用快捷命令（如 `im +messages-send`、`calendar +agenda`）→ 再使用 `schema` 自省 → 若快捷命令不覆盖，再退到 API 命令或 `lark-cli api` 通用调用
+- **安全规则**:
+  - 写操作优先 `--dry-run`（如支持）
+  - 遇到不熟悉的 API，先跑 `lark-cli schema <api>`
+  - 不在回复中泄露 token / secret / app credential
+- **当前状态**: 2026-03-28 检查发现本机尚未安装 `lark-cli`，后续使用前需先执行：`npm install -g @larksuite/cli`
+---
 ## Session Labels（会话持久标签）
 - 脚本: `scripts/session_labels.ps1`
 - 存储: `memory/session-labels.json`
