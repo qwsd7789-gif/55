@@ -267,6 +267,14 @@ Only if Scrapling/automation fetch also fails, move to manual alternatives, and 
 - 其中标准 skill 入口为：`C:\Users\Administrator\.openclaw\skills\chrome-cdp-skill\skills\chrome-cdp\SKILL.md`
 - 当需要“直接管用户当前主 Chrome 会话、复用已登录页面状态、读取当前打开标签页”时，优先考虑使用该 skill 路径
 - 依赖前提：Chrome 需在 `chrome://inspect/#remote-debugging` 中开启 remote debugging
+## 飞书本地文件发送默认 SOP（全局）
+- 当用户要求“把本机上的图片/视频/文件发到飞书给我”时，默认优先使用 **`lark-cli`** 完成发送。
+- 默认发送身份：显式使用 `--as bot`。
+- 接收方 ID：优先使用当前 `lark-cli auth status` 返回的当前 app 下 `userOpenId`，不要直接假设消息元数据里的 sender id 可复用；若出现 `open_id cross app`，立即切换到当前 app 的 `userOpenId`。
+- 本地媒体文件路径规则：`lark-cli` 发送图片/视频时优先使用“复制到 workspace 临时目录 → 切到目标目录 → 用相对路径发送”的方式，避免直接传绝对路径。
+- 图片发送：使用 `lark-cli im +messages-send --as bot --user-id <open_id> --image ./file.jpg`。
+- 视频发送：先生成封面图，再使用 `lark-cli im +messages-send --as bot --user-id <open_id> --video ./video.mp4 --video-cover ./cover.jpg`。
+- 若用户只说“随便找一张/一个发我”，可在本机常见路径（如桌面、D 盘）中自行挑选一个小文件完成测试发送。
 ## X（Twitter）抓取默认 SOP（全局）
 - 当前默认主工具：`C:\Users\Administrator\.openclaw\workspace\tools\feedgrab`
 - SOP 文档：`docs/x-grab-sop.md`
