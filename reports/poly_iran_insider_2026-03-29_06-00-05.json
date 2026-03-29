@@ -1,0 +1,24 @@
+﻿[
+    {
+        "event":  "Purdue Boilermakers vs. Arizona Wildcats",
+        "amountUSD":  2744,
+        "orderTimeCN":  "2026-03-29 05:52:26",
+        "odds":  0.28,
+        "endTimeCN":  "2026-03-29 08:49:00",
+        "wallet":  "0xe102b1da4367d827b48c47ea91fadf6997ff71df",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/cbb-pur-arz-2026-03-28"
+    },
+    {
+        "event":  "Purdue Boilermakers vs. Arizona Wildcats",
+        "amountUSD":  2744,
+        "orderTimeCN":  "2026-03-29 05:52:26",
+        "odds":  0.28,
+        "endTimeCN":  "2026-03-29 08:49:00",
+        "wallet":  "0xe102b1da4367d827b48c47ea91fadf6997ff71df",
+        "hitReasons":  "+10 first-order-heavy(sampled)",
+        "score":  10,
+        "link":  "https://polymarket.com/event/cbb-pur-arz-2026-03-28"
+    }
+]
