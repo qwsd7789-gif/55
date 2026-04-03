@@ -32,6 +32,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - **默认触发**: 用户给出视频链接/视频文件，并要求提取文案、字幕、口播内容，或要求理解视频内容
 - **适用平台**: 小红书、抖音、B站、YouTube 等
 - **当前状态**: 已可用；2026-03-10 已修复阶段2所需 ffmpeg 环境
+## 即梦 / Dreamina CLI
+- **共享全局技能**: `seedance-cli`
+- **安装位置**: `C:\Users\Administrator\.openclaw\skills\seedance-cli`
+- **本机二进制**: `C:\Users\Administrator\dreamina-bin\dreamina.exe`
+- **默认用途**: 当用户明确要求“直接提交即梦任务/查 submit_id/查余额/查结果”时，优先走本地官方 CLI，而不是只写提示词
+- **默认视频模型**: `seedance2.0fast`
+- **常见能力**: `text2video`、`image2video`、`multiframe2video`、`multimodal2video`、`query_result`、`list_task`、`user_credit`
+- **当前状态**: 2026-04-03 已验证可直接提交任务，账户余额可用
 
 ## ASR 转写默认路径
 - **默认工具**: `coli asr`（本地离线）
